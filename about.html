@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Mohammad Alhaj Younes</title>
+  <meta name="description" content="18+ years of healthcare marketing, brand strategy, art direction, and professional photography in the UAE." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --white:          #ffffff;
+      --off-white:      #fafaf7;
+      --warm-light:     #f4f1ea;
+      --warm-mid:       #e8e3d8;
+      --border:         #ddd8ce;
+      --border-light:   #edeae3;
+      --olive-pale:     #c8c4a8;
+      --olive-light:    #a8a480;
+      --olive:          #7a7855;
+      --olive-dark:     #575740;
+      --charcoal:       #2e2e26;
+      --near-black:     #1a1a12;
+      --text-muted:     #8a8874;
+      --text-secondary: #5c5c4a;
+      --text-primary:   #1a1a12;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 32px;
+      --shadow-sm: 0 2px 8px rgba(26,26,18,0.06);
+      --shadow-md: 0 8px 32px rgba(26,26,18,0.10);
+      --shadow-lg: 0 20px 60px rgba(26,26,18,0.14);
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--font-sans); background-color: var(--off-white); color: var(--text-primary); line-height: 1.7; overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 7rem 0; }
+    .section--warm { background-color: var(--warm-light); }
+    .section--dark { background-color: var(--near-black); color: var(--white); }
+
+    .label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--olive);
+    }
+    .label--light { color: var(--olive-light); }
+
+    .heading-xl { font-family: var(--font-serif); font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+    .heading-lg { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+    .heading-md { font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 600; line-height: 1.25; }
+
+    .divider { width: 48px; height: 2px; background-color: var(--olive); margin: 1.25rem 0 2rem; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; border-radius: 50px;
+      font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.02em; transition: var(--transition); cursor: pointer; border: none;
+    }
+    .btn--primary { background-color: var(--near-black); color: var(--white); }
+    .btn--primary:hover { background-color: var(--olive-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn--outline { background-color: transparent; color: var(--near-black); border: 1.5px solid var(--near-black); }
+    .btn--outline:hover { background-color: var(--near-black); color: var(--white); transform: translateY(-2px); }
+    .btn--olive { background-color: var(--olive); color: var(--white); }
+    .btn--olive:hover { background-color: var(--olive-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn--outline-light { background-color: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.35); }
+    .btn--outline-light:hover { background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
+
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1.5rem 0; transition: var(--transition);
+      background-color: rgba(11,11,8,0.85);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav.scrolled {
+      background-color: rgba(250,250,247,0.96);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav__logo {
+      font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700;
+      color: rgba(242,236,222,0.88); letter-spacing: -0.01em; transition: color 0.35s ease;
+    }
+    .nav__logo span { color: var(--olive-light); transition: color 0.35s ease; }
+    .nav.scrolled .nav__logo { color: var(--near-black); }
+    .nav.scrolled .nav__logo span { color: var(--olive); }
+    .nav__links { display: flex; align-items: center; gap: 2.5rem; }
+    .nav__links a {
+      font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.6);
+      letter-spacing: 0.02em; transition: color 0.2s; position: relative;
+    }
+    .nav__links a.active { color: var(--olive-light); font-weight: 600; }
+    .nav__links a::after {
+      content: ''; position: absolute; bottom: -3px; left: 0;
+      width: 0; height: 1.5px; background-color: var(--olive-light); transition: width 0.25s ease;
+    }
+    .nav__links a:hover { color: rgba(255,255,255,0.9); }
+    .nav__links a:hover::after { width: 100%; }
+    .nav.scrolled .nav__links a { color: var(--text-secondary); }
+    .nav.scrolled .nav__links a.active { color: var(--olive-dark); }
+    .nav.scrolled .nav__links a::after { background-color: var(--olive); }
+    .nav.scrolled .nav__links a:hover { color: var(--near-black); }
+    .nav__cta { font-size: 0.82rem; padding: 0.65rem 1.5rem; }
+
+    .nav__toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav__toggle span { display: block; width: 24px; height: 1.5px; background-color: rgba(255,255,255,0.8); transition: var(--transition); }
+    .nav.scrolled .nav__toggle span { background-color: var(--near-black); }
+
+    .nav__mobile {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background-color: var(--off-white); z-index: 999;
+      flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+    }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--near-black); transition: color 0.2s; }
+    .nav__mobile a:hover { color: var(--olive); }
+    .nav__mobile-close { position: absolute; top: 1.5rem; right: 2rem; font-size: 2rem; cursor: pointer; background: none; border: none; color: var(--near-black); }
+
+    /* ── ABOUT HERO BANNER ── */
+    .about-banner {
+      min-height: 70vh;
+      background-color: #0b0b08;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .about-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(11,11,8,0.96) 0%, rgba(11,11,8,0.88) 50%, rgba(11,11,8,0.55) 100%);
+      z-index: 1;
+    }
+    .about-banner__photo {
+      position: absolute; inset: 0;
+      z-index: 0;
+    }
+    .about-banner__photo img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center 15%;
+      opacity: 0.45;
+    }
+    .about-banner__content {
+      position: relative; z-index: 2;
+      padding: 9rem 0 5rem;
+      width: 100%;
+    }
+    .about-banner__eyebrow {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--olive-light); margin-bottom: 1.5rem;
+    }
+    .about-banner__eyebrow::before {
+      content: ''; display: inline-block; width: 24px; height: 1px;
+      background: var(--olive-light); flex-shrink: 0;
+    }
+    .about-banner__name {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 700; color: var(--white);
+      line-height: 1.0; letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+    .about-banner__name em { font-weight: 400; font-style: italic; color: rgba(242,236,222,0.85); }
+    .about-banner__roles {
+      font-size: 0.9rem; color: rgba(255,255,255,0.45); letter-spacing: 0.06em;
+      font-weight: 400; max-width: 520px; line-height: 1.8;
+    }
+    .about-banner__scroll {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(255,255,255,0.25); margin-top: 3rem;
+    }
+    .about-banner__scroll-line {
+      display: block; width: 36px; height: 1px;
+      background: rgba(255,255,255,0.2); flex-shrink: 0;
+    }
+
+    /* ── STORY SECTION ── */
+    .story__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .story__photo {
+      position: sticky;
+      top: 6rem;
+    }
+    .story__photo img {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+    }
+    .story__photo-caption {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+    .story__quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+      font-weight: 400; font-style: italic;
+      line-height: 1.6; color: var(--charcoal);
+      margin: 2rem 0 2.5rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--olive);
+    }
+    .story__text {
+      font-size: 1.05rem; color: var(--text-secondary);
+      line-height: 1.9; margin-bottom: 1.25rem;
+    }
+    .story__ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; }
+
+    /* ── DISCIPLINES ── */
+    .disciplines__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+    .disciplines__list {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .disciplines__item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border-light);
+      transition: background-color 0.2s;
+    }
+    .disciplines__item:last-child { border-bottom: none; }
+    .disciplines__item:hover { background-color: var(--warm-light); }
+    .disciplines__icon {
+      width: 36px; height: 36px; background-color: var(--warm-light);
+      border-radius: var(--radius-sm); display: flex; align-items: center;
+      justify-content: center; flex-shrink: 0; color: var(--olive);
+    }
+    .disciplines__text { font-size: 0.9rem; font-weight: 500; color: var(--text-primary); }
+
+    /* ── CAREER TIMELINE ── */
+    .timeline { padding: 7rem 0; background-color: var(--near-black); color: var(--white); }
+    .timeline__header { max-width: 640px; margin-bottom: 4rem; }
+    .timeline__track {
+      position: relative;
+      max-width: 820px;
+    }
+    .timeline__track::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 1px; background: rgba(255,255,255,0.08);
+    }
+    .timeline__item {
+      padding-left: 3rem;
+      padding-bottom: 3rem;
+      position: relative;
+    }
+    .timeline__item:last-child { padding-bottom: 0; }
+    .timeline__item::before {
+      content: '';
+      position: absolute; left: -4px; top: 6px;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--olive); border: 2px solid var(--near-black);
+      box-shadow: 0 0 0 3px rgba(120,120,85,0.3);
+    }
+    .timeline__period {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--olive-light); margin-bottom: 0.5rem;
+    }
+    .timeline__company {
+      font-family: var(--font-serif); font-size: 1.25rem;
+      font-weight: 700; color: var(--white); margin-bottom: 0.25rem;
+    }
+    .timeline__role {
+      font-size: 0.88rem; color: rgba(255,255,255,0.45); margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+    .timeline__detail {
+      font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.75;
+      max-width: 560px;
+    }
+
+    /* ── STATS BAND ── */
+    .about-stats {
+      background-color: var(--warm-light);
+      padding: 4rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .about-stats__inner {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; text-align: center;
+    }
+    .about-stats__item { padding: 1rem; border-right: 1px solid var(--border); }
+    .about-stats__item:last-child { border-right: none; }
+    .about-stats__value {
+      font-family: var(--font-serif); font-size: 2.75rem; font-weight: 700;
+      color: var(--near-black); line-height: 1; margin-bottom: 0.5rem;
+    }
+    .about-stats__label { font-size: 0.82rem; color: var(--text-muted); letter-spacing: 0.04em; }
+
+    /* ── FOOTER (same as index.html) ── */
+    .footer { background-color: var(--near-black); color: var(--white); padding: 5rem 0 2rem; }
+    .footer__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; margin-bottom: 4rem; }
+    .footer__brand-name { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 700; line-height: 1.15; margin-bottom: 1rem; }
+    .footer__brand-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 360px; margin-bottom: 2rem; }
+    .footer__social { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); display: inline-flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.55); transition: var(--transition); margin-right: 0.5rem; }
+    .footer__social:hover { border-color: var(--olive-light); color: var(--olive-light); transform: translateY(-2px); }
+    .footer__contact-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--olive-light); margin-bottom: 1.5rem; }
+    .footer__contact-item { display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.55); margin-bottom: 1rem; }
+    .footer__contact-icon { flex-shrink: 0; color: var(--olive-light); }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer__copy { font-size: 0.8rem; color: rgba(255,255,255,0.28); }
+    .footer__bottom-links { display: flex; gap: 1.5rem; }
+    .footer__bottom-links a { font-size: 0.8rem; color: rgba(255,255,255,0.28); transition: color 0.2s; }
+    .footer__bottom-links a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .story__inner, .disciplines__inner { grid-template-columns: 1fr; gap: 3rem; }
+      .story__photo { position: relative; top: 0; }
+      .story__photo img { max-width: 480px; margin: 0 auto; }
+      .about-stats__inner { grid-template-columns: repeat(2, 1fr); }
+      .about-stats__item { border-right: none; border-bottom: 1px solid var(--border); }
+      .footer__inner { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 600px) {
+      .nav__links, .nav__cta { display: none; }
+      .nav__toggle { display: flex; }
+      .about-banner__name { font-size: clamp(2.6rem, 10vw, 4rem); }
+      .about-stats__inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed; bottom: 2rem; right: 2rem;
+      width: 52px; height: 52px;
+      background-color: #25d366; color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 18px rgba(37,211,102,.40), 0 2px 6px rgba(0,0,0,.12);
+      z-index: 1200;
+      transition: transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s ease;
+      animation: waIn .6s cubic-bezier(.34,1.56,.64,1) 1.4s both;
+    }
+    .wa-float:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 8px 28px rgba(37,211,102,.55), 0 3px 10px rgba(0,0,0,.15); }
+    .wa-float svg { width: 27px; height: 27px; flex-shrink: 0; }
+    .wa-float::before {
+      content: 'Chat on WhatsApp';
+      position: absolute; right: calc(100% + 10px); top: 50%;
+      transform: translateY(-50%) translateX(4px);
+      background: var(--near-black); color: #fff;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em;
+      padding: .38rem .8rem; border-radius: 6px;
+      white-space: nowrap; opacity: 0; pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .wa-float:hover::before { opacity: 1; transform: translateY(-50%) translateX(0); }
+    @keyframes waIn { from { opacity:0; transform:scale(.6) translateY(20px); } to { opacity:1; transform:scale(1) translateY(0); } }
+    @media (max-width: 768px) {
+      .wa-float { bottom: 1.25rem; right: 1.25rem; width: 48px; height: 48px; }
+      .wa-float svg { width: 24px; height: 24px; }
+      .wa-float::before { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Mohammad <span>Alhaj Younes</span></a>
+        <ul class="nav__links">
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="index.html#gallery">Portfolio</a></li>
+          <li><a href="index.html#case-studies">Work</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a href="index.html#contact" class="btn btn--olive nav__cta">Let's Connect</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <button class="nav__mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="expertise.html" class="mobile-link">Expertise</a>
+    <a href="index.html#gallery" class="mobile-link">Portfolio</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+  </div>
+
+
+  <!-- ABOUT HERO BANNER -->
+  <section class="about-banner" id="top">
+    <div class="about-banner__photo">
+      <img src="images/Moe self picture/Mohammad Alhaj Younes.jpeg" alt="Mohammad Alhaj Younes" />
+    </div>
+    <div class="container">
+      <div class="about-banner__content">
+        <p class="about-banner__eyebrow">About</p>
+        <h1 class="about-banner__name"><em>Mohammad</em><br>Alhaj Younes</h1>
+        <p class="about-banner__roles">
+          Healthcare Marketing Manager &nbsp;·&nbsp; Brand Strategist &nbsp;·&nbsp; Art Director &nbsp;·&nbsp; Professional Photographer
+        </p>
+        <div class="about-banner__scroll">
+          <span class="about-banner__scroll-line"></span>
+          United Arab Emirates · 18+ Years
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- STATS BAND -->
+  <div class="about-stats">
+    <div class="container">
+      <div class="about-stats__inner">
+        <div class="about-stats__item reveal">
+          <div class="about-stats__value">18+</div>
+          <div class="about-stats__label">Years in UAE Healthcare</div>
+        </div>
+        <div class="about-stats__item reveal reveal-delay-1">
+          <div class="about-stats__value">4</div>
+          <div class="about-stats__label">Major Healthcare Brands</div>
+        </div>
+        <div class="about-stats__item reveal reveal-delay-2">
+          <div class="about-stats__value">360°</div>
+          <div class="about-stats__label">Strategy + Creative + Visual</div>
+        </div>
+        <div class="about-stats__item reveal reveal-delay-3">
+          <div class="about-stats__value">6+</div>
+          <div class="about-stats__label">Photography Disciplines</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- STORY SECTION -->
+  <section class="section" id="story">
+    <div class="container">
+      <div class="story__inner">
+
+        <!-- Left: Photo -->
+        <div class="story__photo reveal">
+          <img
+            src="images/Moe self picture/Mohammad Al Hajyounes.png"
+            alt="Mohammad Alhaj Younes — Professional Portrait"
+          />
+          <p class="story__photo-caption">Mohammad Alhaj Younes · UAE</p>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="reveal reveal-delay-1">
+          <p class="label">The Story</p>
+          <div class="divider"></div>
+          <h2 class="heading-lg">A rare blend of<br>strategy, creativity,<br>and visual mastery.</h2>
+
+          <blockquote class="story__quote">
+            "Great healthcare marketing doesn't just inform — it inspires trust, builds loyalty, and transforms how people see their health."
+          </blockquote>
+
+          <p class="story__text">
+            Mohammad Alhaj Younes is a seasoned Healthcare Marketing Manager and Brand Strategist with over 18 years of progressive experience across the UAE's leading healthcare institutions. His career spans strategic marketing leadership, medical branding, corporate communications, and event management.
+          </p>
+          <p class="story__text">
+            As an Art Director and Professional Photographer, Mohammad brings an extraordinary creative eye to every project — whether developing a hospital's visual identity, directing a multi-platform awareness campaign, or capturing executive portraits and events through his lens.
+          </p>
+          <p class="story__text">
+            His unique ability to operate simultaneously at the strategic and creative levels makes him a singular force in UAE healthcare communications. Where most professionals excel in one lane, Mohammad navigates all three — strategy, design, and photography — with equal mastery.
+          </p>
+          <p class="story__text">
+            Born from a deep belief that effective healthcare marketing must be both scientifically credible and emotionally resonant, his work consistently bridges the gap between clinical trust and human connection.
+          </p>
+
+          <div class="story__ctas">
+            <a href="index.html#gallery" class="btn btn--primary">
+              View Portfolio
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="index.html#contact" class="btn btn--outline">Work Together</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DISCIPLINES SECTION -->
+  <section class="section section--warm" id="disciplines">
+    <div class="container">
+      <div class="disciplines__inner">
+
+        <!-- Left: Intro -->
+        <div class="reveal">
+          <p class="label">Core Disciplines</p>
+          <div class="divider"></div>
+          <h2 class="heading-lg">Where every skill<br>serves a purpose.</h2>
+          <p style="color:var(--text-secondary); font-size:1.05rem; line-height:1.85; margin-top:1.5rem;">
+            Each discipline in Mohammad's portfolio is not a standalone skill — it is a thread in a larger creative and strategic tapestry, purposefully developed over two decades of real-world healthcare practice.
+          </p>
+          <p style="color:var(--text-secondary); font-size:1.05rem; line-height:1.85; margin-top:1.25rem;">
+            From patient-centered awareness campaigns to executive photography, every engagement is approached with the same rigour: <em>what story does this need to tell, and who needs to believe it?</em>
+          </p>
+        </div>
+
+        <!-- Right: Disciplines List -->
+        <div class="reveal reveal-delay-2">
+          <div class="disciplines__list">
+
+            <div class="disciplines__item">
+              <div class="disciplines__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <span class="disciplines__text">Healthcare Marketing Strategy &amp; Leadership</span>
+            </div>
+
+            <div class="disciplines__item">
+              <div class="disciplines__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <span class="disciplines__text">Medical Branding &amp; Visual Identity Systems</span>
+            </div>
+
+            <div class="disciplines__item">
+              <div class="disciplines__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <span class="disciplines__text">Art Direction · Campaign Creative Direction</span>
+            </div>
+
+            <div class="disciplines__item">
+              <div class="disciplines__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+              <span class="disciplines__text">Professional Photography — 6+ Disciplines</span>
+            </div>
+
+            <div class="disciplines__item">
+              <div class="disciplines__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <span class="disciplines__text">Events &amp; Activations Management</span>
+            </div>
+
+            <div class="disciplines__item">
+              <div class="disciplines__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <span class="disciplines__text">Strategic Communications &amp; Public Relations</span>
+            </div>
+
+            <div class="disciplines__item">
+              <div class="disciplines__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </div>
+              <span class="disciplines__text">Digital Marketing &amp; Social Media for Healthcare</span>
+            </div>
+
+            <div class="disciplines__item">
+              <div class="disciplines__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <span class="disciplines__text">Patient Engagement &amp; Community Outreach</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CAREER TIMELINE -->
+  <section class="timeline" id="career">
+    <div class="container">
+      <div class="timeline__header reveal">
+        <p class="label label--light">Career</p>
+        <div class="divider" style="background-color:var(--olive-light); margin-bottom:1.5rem;"></div>
+        <h2 class="heading-lg" style="color:var(--white);">18+ Years of<br>Healthcare Leadership.</h2>
+        <p style="color:rgba(255,255,255,0.45); font-size:1rem; margin-top:1rem; line-height:1.8;">
+          A career built on trust, creativity, and an unwavering commitment to meaningful healthcare communication.
+        </p>
+      </div>
+
+      <div class="timeline__track">
+
+        <div class="timeline__item reveal">
+          <p class="timeline__period">Current Position</p>
+          <h3 class="timeline__company">Mediclinic Hospital</h3>
+          <p class="timeline__role">Healthcare Marketing Manager</p>
+          <p class="timeline__detail">
+            Leading marketing strategy, brand management, creative direction, and multi-channel campaign execution for one of the UAE's premier healthcare groups. Overseeing internal and external communications, events, and digital presence.
+          </p>
+        </div>
+
+        <div class="timeline__item reveal reveal-delay-1">
+          <p class="timeline__period">Al Noor Hospital</p>
+          <h3 class="timeline__company">Al Noor Hospital Group</h3>
+          <p class="timeline__role">Marketing Manager · Art Director · Photographer</p>
+          <p class="timeline__detail">
+            Directed marketing strategy, brand identity, and creative production across Al Noor's network. Led major campaigns including IDCAN 2016 International Conference, blood donation drives, and media coverage programs. Established the brand's visual standards across digital and print.
+          </p>
+        </div>
+
+        <div class="timeline__item reveal reveal-delay-2">
+          <p class="timeline__period">Capital Ambulance & Medical Services</p>
+          <h3 class="timeline__company">Capital Ambulance</h3>
+          <p class="timeline__role">Marketing Lead · Creative Director</p>
+          <p class="timeline__detail">
+            Developed brand positioning, corporate identity, and communications strategy for a leading UAE ambulance and emergency services provider. Managed all creative output from campaign concepts through to production.
+          </p>
+        </div>
+
+        <div class="timeline__item reveal reveal-delay-3">
+          <p class="timeline__period">Pioneer Medical Services</p>
+          <h3 class="timeline__company">Pioneer Medical Services</h3>
+          <p class="timeline__role">Brand Strategist · Marketing Manager</p>
+          <p class="timeline__detail">
+            Built the marketing function from the ground up — brand strategy, visual identity, patient communications, and digital marketing. Established consistent brand presence across all touchpoints and platforms.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand-name">Mohammad<br>Alhaj Younes</p>
+          <p class="footer__brand-tagline">
+            Healthcare Marketing Manager · Brand Strategist<br>Art Director · Professional Photographer<br><br>
+            United Arab Emirates
+          </p>
+          <div style="display:flex; gap:0.75rem; margin-top:0.5rem;">
+            <a href="https://www.linkedin.com/in/mohammad-al-haj-younes/" class="footer__social" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.instagram.com/moe.hajyounes?igsh=M242OXNmYmJidGZy" class="footer__social" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__contact-label">Get in touch</p>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:Mohammadhy.031@gmail.com" style="transition:color 0.2s;" onmouseover="this.style.color='#a8a480'" onmouseout="this.style.color=''">
+              Mohammadhy.031@gmail.com
+            </a>
+          </div>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +971 55 926 9468
+          </div>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            United Arab Emirates
+          </div>
+          <a href="mailto:Mohammadhy.031@gmail.com" class="btn btn--olive" style="margin-top:1.5rem; width:100%; justify-content:center;">
+            Send a Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Mohammad Alhaj Younes. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#gallery">Portfolio</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Nav scrolled state
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/971559269468?text=Hello%20Mohammad%2C%20I%20viewed%20your%20portfolio%20website%20and%20would%20like%20to%20connect." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+</body>
+</html>

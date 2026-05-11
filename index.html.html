@@ -1,0 +1,2549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Alhaj Younes — Healthcare Marketing & Creative Direction</title>
+  <meta name="description" content="18+ years of healthcare marketing, brand strategy, art direction, and professional photography in the UAE." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS VARIABLES — change colors and fonts here
+       ============================================================ */
+    :root {
+      --white:        #ffffff;
+      --off-white:    #fafaf7;
+      --warm-light:   #f4f1ea;
+      --warm-mid:     #e8e3d8;
+      --border:       #ddd8ce;
+      --border-light: #edeae3;
+      --olive-pale:   #c8c4a8;
+      --olive-light:  #a8a480;
+      --olive:        #7a7855;
+      --olive-dark:   #575740;
+      --charcoal:     #2e2e26;
+      --near-black:   #1a1a12;
+      --text-muted:   #8a8874;
+      --text-secondary: #5c5c4a;
+      --text-primary: #1a1a12;
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 32px;
+
+      --shadow-sm: 0 2px 8px rgba(26,26,18,0.06);
+      --shadow-md: 0 8px 32px rgba(26,26,18,0.10);
+      --shadow-lg: 0 20px 60px rgba(26,26,18,0.14);
+
+      --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--off-white);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    ul { list-style: none; }
+
+    /* ============================================================
+       UTILITY CLASSES
+       ============================================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section {
+      padding: 7rem 0;
+    }
+
+    .section--dark {
+      background-color: var(--near-black);
+      color: var(--white);
+    }
+
+    .section--warm {
+      background-color: var(--warm-light);
+    }
+
+    .label {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--olive);
+    }
+
+    .label--light {
+      color: var(--olive-light);
+    }
+
+    .heading-xl {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .heading-lg {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .heading-md {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      border-radius: 50px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn--primary {
+      background-color: var(--near-black);
+      color: var(--white);
+    }
+    .btn--primary:hover {
+      background-color: var(--olive-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn--outline {
+      background-color: transparent;
+      color: var(--near-black);
+      border: 1.5px solid var(--near-black);
+    }
+    .btn--outline:hover {
+      background-color: var(--near-black);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn--outline-light {
+      background-color: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.35);
+    }
+    .btn--outline-light:hover {
+      background-color: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    .btn--olive {
+      background-color: var(--olive);
+      color: var(--white);
+    }
+    .btn--olive:hover {
+      background-color: var(--olive-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background-color: var(--olive);
+      margin: 1.25rem 0 2rem;
+    }
+
+    /* ============================================================
+       SCROLL ANIMATION — elements fade in on scroll
+       ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1),
+                  transform 0.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.5rem 0;
+      transition: var(--transition);
+    }
+
+    .nav.scrolled {
+      background-color: rgba(250,250,247,0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__logo {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: rgba(242,236,222,0.88);
+      letter-spacing: -0.01em;
+      transition: color 0.35s ease;
+    }
+
+    .nav__logo span {
+      color: var(--olive-light);
+      transition: color 0.35s ease;
+    }
+
+    .nav.scrolled .nav__logo { color: var(--near-black); }
+    .nav.scrolled .nav__logo span { color: var(--olive); }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .nav__links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--olive);
+      transition: width 0.25s ease;
+    }
+
+    .nav__links a:hover { color: var(--near-black); }
+    .nav__links a:hover::after { width: 100%; }
+
+    .nav__cta {
+      font-size: 0.82rem;
+      padding: 0.65rem 1.5rem;
+    }
+
+    /* Mobile nav toggle */
+    .nav__toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav__toggle span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background-color: var(--near-black);
+      transition: var(--transition);
+    }
+
+    /* Mobile menu */
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: var(--off-white);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--near-black);
+      transition: color 0.2s;
+    }
+    .nav__mobile a:hover { color: var(--olive); }
+    .nav__mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--near-black);
+    }
+
+    /* ============================================================
+       HERO SECTION
+       ============================================================ */
+    /* ── HERO — Legendary Dark Editorial ── */
+    .hero {
+      min-height: 100vh;
+      background-color: #0b0b08;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* left-side gradient so text stays readable */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        100deg,
+        #0b0b08 0%,
+        #0b0b08 36%,
+        rgba(11,11,8,0.88) 50%,
+        rgba(11,11,8,0.35) 66%,
+        transparent 100%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* subtle grain texture */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 180px;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .hero__photo-wrap {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 54%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero__photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .hero__container {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding-top: 9rem;
+      padding-bottom: 5rem;
+    }
+
+    .hero__content { max-width: 580px; }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--olive-light);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--olive-light);
+      flex-shrink: 0;
+      animation: heroPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes heroPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.25; transform: scale(0.55); }
+    }
+
+    .hero__name {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero__name-first {
+      font-family: var(--font-serif);
+      font-size: clamp(3.2rem, 6.5vw, 6.2rem);
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(242,236,222,0.92);
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+    }
+
+    .hero__name-last {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5.8vw, 5.5rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+    }
+
+    .hero__rule {
+      width: 72px;
+      height: 1.5px;
+      background: linear-gradient(to right, var(--olive-light), transparent);
+      margin-bottom: 2rem;
+    }
+
+    .hero__roles {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero__roles li {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.42);
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .hero__roles li::before {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background-color: var(--olive-light);
+      opacity: 0.5;
+      flex-shrink: 0;
+    }
+
+    .hero__ctas {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .hero__footer {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 1.5rem 0;
+    }
+
+    .hero__footer-inner {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero__footer-stat {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.32);
+      letter-spacing: 0.05em;
+    }
+
+    .hero__footer-stat span {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--olive-light);
+      margin-right: 0.35rem;
+    }
+
+    .hero__footer-sep { color: rgba(255,255,255,0.1); font-size: 1.4rem; }
+
+    /* ── FLOATING LOGOS ── */
+    .brands__logo-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .brands__logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: grayscale(100%) brightness(0.55);
+      opacity: 0.65;
+      transition: all 0.4s ease;
+      cursor: default;
+    }
+
+    .brands__logo-item:hover {
+      filter: grayscale(0%) brightness(1);
+      opacity: 1;
+      transform: scale(1.06);
+    }
+
+    .brands__logo-item img {
+      max-height: 58px;
+      max-width: 200px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* ── LIGHTBOX / CAROUSEL ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(7,7,5,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .lightbox.open { display: flex; align-items: center; justify-content: center; }
+
+    .lightbox__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 6rem;
+      gap: 1.25rem;
+    }
+
+    .lightbox__img-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 0;
+    }
+
+    .lightbox__img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.7);
+      animation: lbIn 0.28s ease;
+    }
+
+    @keyframes lbIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .lightbox__caption {
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      line-height: 1.6;
+    }
+
+    .lightbox__caption strong { color: rgba(255,255,255,0.8); font-weight: 600; }
+
+    .lightbox__counter {
+      position: absolute;
+      top: 1.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .lightbox__btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.22s;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .lightbox__btn:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: var(--olive-light);
+      color: var(--olive-light);
+    }
+
+    .lightbox__prev { left: 1.5rem; }
+    .lightbox__next { right: 1.5rem; }
+
+    .lightbox__close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.22s;
+      font-size: 1.1rem;
+    }
+
+    .lightbox__close:hover { background: rgba(255,50,50,0.15); border-color: rgba(255,80,80,0.4); color: #fff; }
+
+    @media (max-width: 768px) {
+      .lightbox__inner { padding: 4rem 1rem; }
+      .lightbox__prev { left: 0.5rem; }
+      .lightbox__next { right: 0.5rem; }
+    }
+
+    /* ============================================================
+       STATS BAND
+       ============================================================ */
+    .stats-band {
+      background-color: var(--near-black);
+      padding: 3rem 0;
+    }
+
+    .stats-band__inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stats-band__item {
+      padding: 1rem;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .stats-band__item:last-child { border-right: none; }
+
+    .stats-band__value {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--olive-light);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stats-band__label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+    }
+
+    /* ============================================================
+       ABOUT TEASER (homepage)
+       ============================================================ */
+    .about-teaser {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-teaser__photo {
+      position: relative;
+    }
+
+    .about-teaser__photo img {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 3 / 4;
+      object-position: center top;
+    }
+
+    .about-teaser__quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin: 2rem 0 1.75rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--olive);
+    }
+
+    .about-teaser__bio {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+
+    .about-teaser__pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .about-teaser__pills span {
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--olive-dark);
+      background-color: var(--warm-light);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.95rem;
+      border-radius: 50px;
+    }
+
+    .about-teaser__ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 960px) {
+      .about-teaser {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .about-teaser__photo img {
+        max-width: 380px;
+        margin: 0 auto;
+        aspect-ratio: 4 / 5;
+      }
+    }
+
+    /* ============================================================
+       EXPERTISE SECTION
+       ============================================================ */
+    .expertise__header {
+      max-width: 640px;
+      margin-bottom: 4rem;
+    }
+
+    .expertise__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .expertise__card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background-color: var(--white);
+      transition: var(--transition);
+    }
+
+    .expertise__card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+      border-color: var(--olive-pale);
+    }
+
+    .expertise__card-header {
+      padding: 2rem 2rem 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .expertise__card-icon {
+      width: 48px;
+      height: 48px;
+      background-color: var(--near-black);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--olive-light);
+    }
+
+    .expertise__card-number {
+      font-family: var(--font-serif);
+      font-size: 0.78rem;
+      color: var(--olive);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .expertise__card-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--near-black);
+      line-height: 1.25;
+    }
+
+    .expertise__card-body {
+      padding: 1.5rem 2rem;
+    }
+
+    .expertise__item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+    .expertise__item:last-child { border-bottom: none; }
+
+    .expertise__item-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--olive);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       BRANDS SECTION
+       ============================================================ */
+    .brands {
+      background-color: var(--warm-light);
+      padding: 5rem 0;
+    }
+
+    .brands__header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .brands__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .brands__card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1rem;
+      min-height: 160px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brands__card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+      border-color: var(--olive-pale);
+    }
+
+    .brands__card-logo-area {
+      width: 60px;
+      height: 60px;
+      background-color: var(--warm-light);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--olive-dark);
+      /* REPLACE: Add <img src="images/logos/company-name.png" alt="Company Name"> inside this div */
+    }
+
+    .brands__card-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+    }
+
+    .brands__add-more {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ============================================================
+       PORTFOLIO GALLERY SECTION
+       ============================================================ */
+    .gallery__header {
+      max-width: 640px;
+      margin-bottom: 3rem;
+    }
+
+    /* Filter tabs */
+    .gallery__filters {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0;
+    }
+
+    .gallery__filter-btn {
+      padding: 0.7rem 1.5rem;
+      border: none;
+      background: none;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .gallery__filter-btn:hover {
+      color: var(--near-black);
+    }
+
+    .gallery__filter-btn.active {
+      color: var(--olive-dark);
+      border-bottom-color: var(--olive);
+      font-weight: 600;
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .gallery__item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background-color: var(--warm-mid);
+      transition: box-shadow 0.4s ease, transform 0.4s ease;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .gallery__item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+    }
+
+    .gallery__item--hidden { display: none; }
+
+    .gallery__thumb {
+      aspect-ratio: 4 / 3;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Category background fallbacks */
+    .gallery__item[data-cat="art"] .gallery__thumb {
+      background: linear-gradient(135deg, #2e2e26 0%, #575740 60%, #7a7855 100%);
+    }
+    .gallery__item[data-cat="photo"] .gallery__thumb {
+      background: linear-gradient(135deg, #3a3830 0%, #6b6655 60%, #a8a480 100%);
+    }
+    .gallery__item[data-cat="healthcare"] .gallery__thumb {
+      background: linear-gradient(135deg, #1e2820 0%, #3a5040 60%, #7a9070 100%);
+    }
+
+    .gallery__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gallery__item:hover .gallery__thumb img {
+      transform: scale(1.07);
+    }
+
+    .gallery__info {
+      padding: 1.1rem 1.4rem 1.3rem;
+      background-color: var(--white);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .gallery__cat-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 0.35rem;
+    }
+
+    .gallery__item-title {
+      font-family: var(--font-serif);
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--near-black);
+      line-height: 1.35;
+    }
+
+    /* Hover overlay */
+    .gallery__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(26,26,18,0.75) 0%,
+        rgba(26,26,18,0.35) 50%,
+        rgba(26,26,18,0.1) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.38s ease;
+    }
+
+    .gallery__item:hover .gallery__overlay { opacity: 1; }
+
+    .gallery__overlay-text {
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.6);
+      padding: 0.55rem 1.4rem;
+      border-radius: 50px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      background: rgba(255,255,255,0.08);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .gallery__item:hover .gallery__overlay-text {
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.85);
+    }
+
+    /* ============================================================
+       CASE STUDIES SECTION
+       ============================================================ */
+    .case-studies {
+      background-color: var(--near-black);
+      color: var(--white);
+    }
+
+    .case-studies__header {
+      max-width: 640px;
+      margin-bottom: 4rem;
+    }
+
+    .case-studies__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .case-study__card {
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      background-color: rgba(255,255,255,0.03);
+    }
+
+    .case-study__card:hover {
+      border-color: rgba(122,120,85,0.5);
+      background-color: rgba(255,255,255,0.06);
+      transform: translateY(-4px);
+    }
+
+    .case-study__card-thumb {
+      height: 200px;
+      background: linear-gradient(135deg, rgba(122,120,85,0.2) 0%, rgba(255,255,255,0.05) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .case-study__card-number {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.06);
+      line-height: 1;
+    }
+
+    .case-study__card-body {
+      padding: 2rem;
+    }
+
+    .case-study__tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--olive-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .case-study__title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+
+    .case-study__meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .case-study__meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .case-study__meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .case-study__meta-value {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+
+    .case-study__card-footer {
+      padding: 1.25rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .case-study__cta {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--olive-light);
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.7;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       CTA BANNER
+       ============================================================ */
+    .cta-banner {
+      background-color: var(--olive-dark);
+      padding: 7rem 0;
+      text-align: center;
+    }
+
+    .cta-banner__inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cta-banner__label {
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-banner__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-banner__title em {
+      font-style: italic;
+      color: var(--olive-pale);
+    }
+
+    .cta-banner__subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-banner__btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn--white {
+      background-color: var(--white);
+      color: var(--olive-dark);
+    }
+    .btn--white:hover {
+      background-color: var(--warm-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ============================================================
+       CONTACT / FOOTER
+       ============================================================ */
+    .footer {
+      background-color: var(--near-black);
+      color: var(--white);
+      padding: 6rem 0 3rem;
+    }
+
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer__brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer__brand-tagline {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      max-width: 300px;
+      margin-bottom: 2rem;
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .footer__social {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      transition: var(--transition);
+    }
+
+    .footer__social:hover {
+      border-color: var(--olive-light);
+      color: var(--olive-light);
+    }
+
+    .footer__col-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer__links a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+    }
+
+    .footer__links a:hover { color: var(--olive-light); }
+
+    .footer__contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .footer__contact-icon {
+      color: var(--olive-light);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer__copy {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .footer__bottom-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer__bottom-links a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.25);
+      transition: color 0.2s;
+    }
+    .footer__bottom-links a:hover { color: var(--olive-light); }
+
+    /* ============================================================
+       INLINE SVG ICONS (helper)
+       ============================================================ */
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .hero__inner { grid-template-columns: 1fr; }
+      .hero__bg-accent { display: none; }
+      .hero__visual { max-width: 600px; margin: 0 auto; }
+      .expertise__grid { grid-template-columns: 1fr; gap: 1rem; }
+      .brands__grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+      .case-studies__grid { grid-template-columns: 1fr; gap: 1rem; }
+      .footer__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-teaser { grid-template-columns: 1fr; gap: 3rem; }
+      .about-teaser__photo img { max-width: 400px; margin: 0 auto; }
+      .stats-band__inner { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 5rem 0; }
+      .container { padding: 0 1.25rem; }
+      .nav__links, .nav__cta { display: none; }
+      .nav__toggle { display: flex; }
+      .brands__grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery__grid { grid-template-columns: 1fr; }
+      .stats-band__inner { grid-template-columns: repeat(2, 1fr); }
+      .hero__ctas { flex-direction: column; align-items: flex-start; }
+      .footer__bottom { flex-direction: column; align-items: flex-start; }
+      .case-studies__grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .brands__grid { grid-template-columns: 1fr; }
+      .stats-band__inner { grid-template-columns: 1fr; }
+      .stats-band__item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed; bottom: 2rem; right: 2rem;
+      width: 52px; height: 52px;
+      background-color: #25d366; color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 18px rgba(37,211,102,.40), 0 2px 6px rgba(0,0,0,.12);
+      z-index: 1200;
+      transition: transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s ease;
+      animation: waIn .6s cubic-bezier(.34,1.56,.64,1) 1.4s both;
+    }
+    .wa-float:hover { transform: scale(1.1) translateY(-3px); box-shadow: 0 8px 28px rgba(37,211,102,.55), 0 3px 10px rgba(0,0,0,.15); }
+    .wa-float svg { width: 27px; height: 27px; flex-shrink: 0; }
+    .wa-float::before {
+      content: 'Chat on WhatsApp';
+      position: absolute; right: calc(100% + 10px); top: 50%;
+      transform: translateY(-50%) translateX(4px);
+      background: var(--near-black); color: #fff;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em;
+      padding: .38rem .8rem; border-radius: 6px;
+      white-space: nowrap; opacity: 0; pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .wa-float:hover::before { opacity: 1; transform: translateY(-50%) translateX(0); }
+    @keyframes waIn { from { opacity:0; transform:scale(.6) translateY(20px); } to { opacity:1; transform:scale(1) translateY(0); } }
+    @media (max-width: 768px) {
+      .wa-float { bottom: 1.25rem; right: 1.25rem; width: 48px; height: 48px; }
+      .wa-float svg { width: 24px; height: 24px; }
+      .wa-float::before { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">Mohammad <span>Alhaj Younes</span></a>
+
+        <ul class="nav__links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#case-studies">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="btn btn--olive nav__cta">Let's Connect</a>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <button class="nav__mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="expertise.html" class="mobile-link">Expertise</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="#case-studies" class="mobile-link">Work</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="hero">
+
+    <!-- Full-bleed portrait photograph -->
+    <div class="hero__photo-wrap">
+      <img
+        class="hero__photo-img"
+        src="images/Moe self picture/Mohammad Al Hajyounes.png"
+        alt="Mohammad Alhaj Younes"
+      />
+    </div>
+
+    <!-- Text content — sits above the gradient overlay -->
+    <div class="hero__container container">
+      <div class="hero__content">
+
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-dot"></span>
+          UAE · 18+ Years Healthcare Marketing
+        </div>
+
+        <div class="hero__name">
+          <span class="hero__name-first">Mohammad</span>
+          <span class="hero__name-last">Alhaj Younes</span>
+        </div>
+
+        <div class="hero__rule"></div>
+
+        <ul class="hero__roles">
+          <li>Healthcare Marketing Manager</li>
+          <li>Brand Strategist</li>
+          <li>Art Director</li>
+          <li>Professional Photographer</li>
+        </ul>
+
+        <div class="hero__ctas">
+          <a href="portfolio.html" class="btn btn--olive">
+            View Portfolio
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--outline-light">
+            Start a Project
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom stats strip -->
+    <div class="hero__footer">
+      <div class="container">
+        <div class="hero__footer-inner">
+          <div class="hero__footer-stat"><span>18+</span> Years in UAE Healthcare</div>
+          <div class="hero__footer-sep">·</div>
+          <div class="hero__footer-stat"><span>360°</span> Strategy to Execution</div>
+          <div class="hero__footer-sep">·</div>
+          <div class="hero__footer-stat"><span>4+</span> Major Healthcare Brands</div>
+          <div class="hero__footer-sep">·</div>
+          <div class="hero__footer-stat"><span>6+</span> Photography Disciplines</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       STATS BAND
+       ============================================================ -->
+  <div class="stats-band">
+    <div class="container">
+      <div class="stats-band__inner">
+        <div class="stats-band__item reveal">
+          <div class="stats-band__value">18+</div>
+          <div class="stats-band__label">Years in UAE Healthcare</div>
+        </div>
+        <div class="stats-band__item reveal reveal-delay-1">
+          <div class="stats-band__value">4</div>
+          <div class="stats-band__label">Major Healthcare Brands</div>
+        </div>
+        <div class="stats-band__item reveal reveal-delay-2">
+          <div class="stats-band__value">360°</div>
+          <div class="stats-band__label">Strategy + Creative + Visual</div>
+        </div>
+        <div class="stats-band__item reveal reveal-delay-3">
+          <div class="stats-band__value">6+</div>
+          <div class="stats-band__label">Photography Disciplines</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       ABOUT TEASER (homepage preview)
+       ============================================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-teaser">
+
+        <!-- Left: Portrait -->
+        <div class="about-teaser__photo reveal">
+          <img
+            src="images/Moe self picture/Mohammad Al Hajyounes.png"
+            alt="Mohammad Alhaj Younes"
+          />
+        </div>
+
+        <!-- Right: Introduction -->
+        <div class="about-teaser__text reveal reveal-delay-1">
+          <p class="label">About</p>
+          <div class="divider"></div>
+          <h2 class="heading-lg">A rare blend of<br>strategy, creativity,<br>and visual mastery.</h2>
+
+          <blockquote class="about-teaser__quote">
+            "Great healthcare marketing doesn't just inform — it inspires trust, builds loyalty, and transforms how people see their health."
+          </blockquote>
+
+          <p class="about-teaser__bio">
+            Mohammad Alhaj Younes is a Healthcare Marketing Manager, Brand Strategist, Art Director, and Professional Photographer with over 18 years of progressive experience across the UAE's leading healthcare institutions. He operates at the rare intersection of strategic thinking and creative execution — making every campaign, brand, and photograph purposeful.
+          </p>
+
+          <div class="about-teaser__pills">
+            <span>Healthcare Marketing</span>
+            <span>Brand Strategy</span>
+            <span>Art Direction</span>
+            <span>Photography</span>
+          </div>
+
+          <div class="about-teaser__ctas">
+            <a href="about.html" class="btn btn--primary">
+              View Full Profile
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--outline">Work Together</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       EXPERTISE / CATEGORIES SECTION
+       ============================================================ -->
+  <section class="section section--warm" id="expertise">
+    <div class="container">
+      <div class="expertise__header reveal">
+        <p class="label">What I Do</p>
+        <div class="divider"></div>
+        <h2 class="heading-lg">Three pillars of<br>creative excellence.</h2>
+        <p style="color:var(--text-secondary); margin-top:1rem; font-size:1.05rem; line-height:1.8;">
+          Spanning art direction, professional photography, and strategic healthcare marketing — each discipline reinforcing the others.
+        </p>
+      </div>
+
+      <div class="expertise__grid">
+
+        <!-- Card 1: Art Direction -->
+        <div class="expertise__card reveal">
+          <div class="expertise__card-header">
+            <div class="expertise__card-icon">
+              <!-- Palette icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+            </div>
+            <span class="expertise__card-number">01 — Art Direction</span>
+            <h3 class="expertise__card-title">Crafting Visual<br>Narratives That Lead.</h3>
+          </div>
+          <div class="expertise__card-body">
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Advertising Design
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Campaign Concepts & Ideation
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Brand Visual Direction
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Creative Projects & Print Production
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Visual Storytelling & Content Strategy
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Photography -->
+        <div class="expertise__card reveal reveal-delay-1">
+          <div class="expertise__card-header">
+            <div class="expertise__card-icon">
+              <!-- Camera icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            </div>
+            <span class="expertise__card-number">02 — Photography</span>
+            <h3 class="expertise__card-title">Every Frame<br>Tells a Story.</h3>
+          </div>
+          <div class="expertise__card-body">
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Baby Photography
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Portrait & Street Photography
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Events & Weddings
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Corporate & Media Photography
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Nature Photography
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Architectural Photography
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Healthcare Marketing -->
+        <div class="expertise__card reveal reveal-delay-2">
+          <div class="expertise__card-header">
+            <div class="expertise__card-icon">
+              <!-- Heart-pulse icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <span class="expertise__card-number">03 — Healthcare Marketing</span>
+            <h3 class="expertise__card-title">Strategy That<br>Heals Brands.</h3>
+          </div>
+          <div class="expertise__card-body">
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Healthcare Marketing Strategy
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Medical Branding & Identity
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Hospital Campaigns & Activations
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Patient Engagement Programs
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Social Media for Healthcare
+            </div>
+            <div class="expertise__item">
+              <span class="expertise__item-dot"></span>
+              Events & Community Activation
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       BRANDS / EXPERIENCE SECTION
+       ============================================================ -->
+  <div class="brands" id="brands">
+    <div class="container">
+      <div class="brands__header reveal">
+        <p class="label">Experience</p>
+        <div class="divider" style="margin:1.25rem auto 0.5rem;"></div>
+        <h2 class="heading-lg" style="margin-bottom:0.75rem;">Healthcare Brands &<br>Organizations</h2>
+        <p style="color:var(--text-secondary); font-size:1rem; max-width:560px; margin:0 auto;">
+          Trusted by leading healthcare institutions across the UAE to lead marketing, branding, and creative direction.
+        </p>
+      </div>
+
+      <div class="brands__logo-grid reveal">
+
+        <div class="brands__logo-item">
+          <img src="images/logo/CA-logo-2025-19-1024x377.png" alt="Capital Ambulance" />
+        </div>
+
+        <div class="brands__logo-item">
+          <img src="images/logo/logonavblue.png" alt="Pioneer Medical Services" />
+        </div>
+
+        <div class="brands__logo-item">
+          <img src="images/logo/alnoor-removebg-preview.png" alt="Al Noor Hospital" />
+        </div>
+
+        <div class="brands__logo-item">
+          <img src="images/logo/Mediclinicgrouplogo.png" alt="Mediclinic" />
+        </div>
+
+      </div>
+
+      <p class="brands__add-more reveal">
+        Additional organizations and partnerships available upon request.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       PORTFOLIO GALLERY SECTION
+       ============================================================ -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="gallery__header reveal">
+        <p class="label">Portfolio</p>
+        <div class="divider"></div>
+        <h2 class="heading-lg">Selected Work<br>& Visual Projects.</h2>
+        <p style="color:var(--text-secondary); margin-top:1rem; font-size:1.05rem; line-height:1.8; max-width:500px;">
+          A curated selection spanning art direction, photography, and healthcare marketing campaigns.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="gallery__filters reveal">
+        <button class="gallery__filter-btn active" data-filter="all">All Work</button>
+        <button class="gallery__filter-btn" data-filter="art">Art Direction</button>
+        <button class="gallery__filter-btn" data-filter="photo">Photography</button>
+        <button class="gallery__filter-btn" data-filter="healthcare">Healthcare Marketing</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery__grid" id="galleryGrid">
+
+        <!-- ═══════════════════════════════════════════════════════
+             HOW TO ADD REAL PHOTOS:
+             1. Create a folder called "images" next to index.html
+             2. Inside "images" create: art-direction / photography / healthcare
+             3. For each item below, replace the placeholder div
+                with: <img src="images/photography/your-photo.jpg" alt="Description">
+                inside the .gallery__thumb div
+             ═══════════════════════════════════════════════════════ -->
+
+        <!-- ── PRODUCT & ART DIRECTION ── -->
+        <div class="gallery__item reveal" data-cat="art">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1i8S98p4h1tzTH_hPUq0298q7c6EFgQtA&sz=w800" alt="Gold Collection Product Photography" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Project</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Art Direction</p>
+            <h4 class="gallery__item-title">Product Photography — Gold Collection</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-1" data-cat="art">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1A6AUgebQouNf4AkGBIYZ6oKV3uUCwGBo&sz=w800" alt="Food Photography Styling" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Project</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Art Direction</p>
+            <h4 class="gallery__item-title">Food Photography — Commercial Styling</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-2" data-cat="art">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1o3Q32F7nFqhsMRW6N0w4F4cIxi-rAlsg&sz=w800" alt="Brand Product Visual" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Project</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Art Direction</p>
+            <h4 class="gallery__item-title">Brand Visual — Product Direction</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-3" data-cat="art">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1B7t4kGf2ZLUtjswq7sj74s6dhOj7uegh&sz=w800" alt="Gold Product Series" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Project</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Art Direction</p>
+            <h4 class="gallery__item-title">Commercial Photography — Gold Series</h4>
+          </div>
+        </div>
+
+        <!-- ── PHOTOGRAPHY ── -->
+        <div class="gallery__item reveal" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1yED3z8Srj9YjiWPJ7JkS8GmijT95NmzO&sz=w800" alt="Baby Photography" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Baby Photography</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-1" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=12QoI6fdGmbrFUrAad0TyB5FNo0oprLYE&sz=w800" alt="Portrait Photography" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Portrait Photography</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-2" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1mrlKaF3hw_Nm7cIRN8-P1LcW4KopCw1d&sz=w800" alt="Beautiful Abu Dhabi Nature Photography" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Nature — Beautiful Abu Dhabi</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1wH6JfB2Ii9Dsu1KRygQMT2bdwIQj5pAz&sz=w800" alt="Sheikh Zayed Grand Mosque" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Architectural — Sheikh Zayed Mosque</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-1" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1XYxDfjEISR0fUA7Am-jwRLbAOdyjzMWh&sz=w800" alt="Sailboats Race Abu Dhabi" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Sailboats Race — UAE, Abu Dhabi</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-2" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=12zpBdUx5qFqSqpHfr5peZqPJvORO2ail&sz=w800" alt="Wedding Photography" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Wedding Photography</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1krjx7QEUzokXQfi3-na3NTUk2F1aZhb-&sz=w800" alt="Yas Hotel Abu Dhabi Architecture" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Architectural — Yas Hotel Abu Dhabi</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-1" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1wb-XfRcdCLoVIHN5TCCtBJNKQ7oLP0Ef&sz=w800" alt="Nature Photography Oman Chameleon" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Nature — Wildlife, Salalah, Oman</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-2" data-cat="photo">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1XAqVyWH1bLf7b5oc76g4F2nmbn_5jyMj&sz=w800" alt="Sheikh Zayed Bridges Opening Ceremony" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Photo</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Photography</p>
+            <h4 class="gallery__item-title">Events — Sheikh Zayed Bridges Opening</h4>
+          </div>
+        </div>
+
+        <!-- ── HEALTHCARE MARKETING ── -->
+        <div class="gallery__item reveal" data-cat="healthcare">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1vsFwcXwzpkCAK_Io8sGzVWY3sktSkUSE&sz=w800" alt="IDCAN 2016 Al Noor Hospital Conference" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Campaign</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Healthcare Marketing</p>
+            <h4 class="gallery__item-title">IDCAN 2016 — Al Noor International Conference</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-1" data-cat="healthcare">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1V5AZsepbcB6SPJl76gf6jGCxryuy1qXd&sz=w800" alt="Medical Conference Photography" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Campaign</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Healthcare Marketing</p>
+            <h4 class="gallery__item-title">Medical Conference — Corporate Photography</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-2" data-cat="healthcare">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1HAiOTzxJ3-x3G4YOe9btL_L3kNXjlVa8&sz=w800" alt="Healthcare Media Coverage" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Campaign</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Healthcare Marketing</p>
+            <h4 class="gallery__item-title">Healthcare Media Coverage — Al Noor Hospital</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal" data-cat="healthcare">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1NuioF0uxEt2nZ89pSDSi1Zz692SozpLD&sz=w800" alt="Blood Donation Campaign Al Noor" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Campaign</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Healthcare Marketing</p>
+            <h4 class="gallery__item-title">Blood Donation Campaign — Al Noor Hospital</h4>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal reveal-delay-1" data-cat="healthcare">
+          <div class="gallery__thumb">
+            <img src="https://drive.google.com/thumbnail?id=1bLn2r0grd4CjCSg3u3Ti3wde_6VB6cJI&sz=w800" alt="Surgical Innovation Media Coverage" loading="lazy">
+            <div class="gallery__overlay"><span class="gallery__overlay-text">View Campaign</span></div>
+          </div>
+          <div class="gallery__info">
+            <p class="gallery__cat-tag">Healthcare Marketing</p>
+            <h4 class="gallery__item-title">Al Noor Hospital — Press & Media</h4>
+          </div>
+        </div>
+
+      </div><!-- /galleryGrid -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FEATURED WORK / CASE STUDIES
+       ============================================================ -->
+  <section class="section case-studies" id="case-studies">
+    <div class="container">
+      <div class="case-studies__header reveal">
+        <p class="label label--light">Featured Work</p>
+        <div class="divider"></div>
+        <h2 class="heading-lg" style="color:var(--white);">Strategic Case<br>Studies.</h2>
+        <p style="color:rgba(255,255,255,0.5); margin-top:1rem; font-size:1.05rem; line-height:1.8;">
+          Deep-dive narratives showcasing strategy, creative direction, and measurable outcomes. Full case studies coming soon.
+        </p>
+      </div>
+
+      <div class="case-studies__grid">
+
+        <!-- Case Study 1 -->
+        <div class="case-study__card reveal">
+          <div class="case-study__card-thumb">
+            <span class="case-study__card-number">01</span>
+          </div>
+          <div class="case-study__card-body">
+            <p class="case-study__tag">Healthcare Marketing · Campaign</p>
+            <h3 class="case-study__title">Multi-Channel Healthcare Awareness Campaign</h3>
+            <div class="case-study__meta">
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Role</span>
+                <!-- EDIT: Your specific role -->
+                <span class="case-study__meta-value">Healthcare Marketing Manager & Creative Director</span>
+              </div>
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Objective</span>
+                <!-- EDIT: Campaign goal -->
+                <span class="case-study__meta-value">Increase patient education and community trust across key UAE demographics</span>
+              </div>
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Outcome</span>
+                <!-- EDIT: Results achieved -->
+                <span class="case-study__meta-value">Significant uplift in patient engagement and measurable brand recall</span>
+              </div>
+            </div>
+          </div>
+          <div class="case-study__card-footer">
+            <span class="case-study__cta">Full case study coming soon →</span>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="case-study__card reveal reveal-delay-1">
+          <div class="case-study__card-thumb">
+            <span class="case-study__card-number">02</span>
+          </div>
+          <div class="case-study__card-body">
+            <p class="case-study__tag">Brand Strategy · Visual Identity</p>
+            <!-- EDIT -->
+            <h3 class="case-study__title">Medical Brand Refresh & Identity System</h3>
+            <div class="case-study__meta">
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Role</span>
+                <span class="case-study__meta-value">Brand Strategist & Art Director</span>
+              </div>
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Objective</span>
+                <span class="case-study__meta-value">Modernize the visual identity and brand positioning of a leading UAE healthcare provider</span>
+              </div>
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Outcome</span>
+                <span class="case-study__meta-value">Consistent brand application across all touchpoints; improved digital performance</span>
+              </div>
+            </div>
+          </div>
+          <div class="case-study__card-footer">
+            <span class="case-study__cta">Full case study coming soon →</span>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="case-study__card reveal reveal-delay-2">
+          <div class="case-study__card-thumb">
+            <span class="case-study__card-number">03</span>
+          </div>
+          <div class="case-study__card-body">
+            <p class="case-study__tag">Photography · Corporate</p>
+            <!-- EDIT -->
+            <h3 class="case-study__title">Executive Healthcare Photography Production</h3>
+            <div class="case-study__meta">
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Role</span>
+                <span class="case-study__meta-value">Lead Photographer & Visual Director</span>
+              </div>
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Objective</span>
+                <span class="case-study__meta-value">Produce executive portraits, team imagery, and facility visuals for brand presence</span>
+              </div>
+              <div class="case-study__meta-row">
+                <span class="case-study__meta-label">Outcome</span>
+                <span class="case-study__meta-value">Elevated brand perception and professional image across digital and print platforms</span>
+              </div>
+            </div>
+          </div>
+          <div class="case-study__card-footer">
+            <span class="case-study__cta">Full case study coming soon →</span>
+          </div>
+        </div>
+
+        <!-- ADD MORE CASE STUDIES: Copy a card above, change the content -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA BANNER
+       ============================================================ -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner reveal">
+        <p class="label cta-banner__label">Ready to Begin</p>
+        <h2 class="cta-banner__title">
+          Let's build something<br><em>extraordinary</em> together.
+        </h2>
+        <p class="cta-banner__subtitle">
+          Whether you need a strategic marketing campaign, a brand identity, creative art direction, or professional photography — let's create work that genuinely stands apart.
+        </p>
+        <div class="cta-banner__btns">
+          <a href="#contact" class="btn btn--white">
+            Get In Touch
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="portfolio.html" class="btn btn--outline-light">View Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER / CONTACT
+       ============================================================ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__inner">
+
+        <!-- Brand -->
+        <div>
+          <p class="footer__brand-name">Mohammad<br>Alhaj Younes</p>
+          <p class="footer__brand-tagline">
+            Healthcare Marketing Manager · Brand Strategist · Art Director · Professional Photographer<br><br>
+            18+ years building healthcare brands across the UAE with strategic depth and creative precision.
+          </p>
+          <div class="footer__socials">
+            <!-- LinkedIn — EDIT href with real URL -->
+            <a href="https://www.linkedin.com/in/mohammad-al-haj-younes/" class="footer__social" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <!-- Instagram — EDIT href with real URL -->
+            <a href="https://www.instagram.com/moe.hajyounes?igsh=M242OXNmYmJidGZy" class="footer__social" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <p class="footer__col-title">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="expertise.html">Expertise</a></li>
+            <li><a href="#brands">Experience</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <p class="footer__col-title">Contact</p>
+
+          <!-- EDIT: Replace with real email -->
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:Mohammadhy.031@gmail.com" style="transition:color 0.2s;" onmouseover="this.style.color='#a8a480'" onmouseout="this.style.color=''">
+              Mohammadhy.031@gmail.com
+            </a>
+          </div>
+
+          <!-- EDIT: Replace with real phone -->
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +971 55 926 9468
+          </div>
+
+          <!-- EDIT: Replace with real location if desired -->
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            United Arab Emirates
+          </div>
+
+          <a href="mailto:Mohammadhy.031@gmail.com" class="btn btn--olive" style="margin-top:1.5rem; width:100%; justify-content:center;">
+            Send a Message
+            <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+      </div><!-- /footer__inner -->
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Mohammad Alhaj Younes. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       LIGHTBOX MODAL
+       ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox__inner">
+      <div class="lightbox__counter" id="lbCounter">1 / 1</div>
+
+      <div class="lightbox__img-wrap">
+        <img class="lightbox__img" id="lbImg" src="" alt="" />
+      </div>
+
+      <div class="lightbox__caption" id="lbCaption"></div>
+    </div>
+
+    <button class="lightbox__btn lightbox__prev" id="lbPrev" aria-label="Previous image">&#8592;</button>
+    <button class="lightbox__btn lightbox__next" id="lbNext" aria-label="Next image">&#8594;</button>
+    <button class="lightbox__close" id="lbClose" aria-label="Close">&#10005;</button>
+  </div>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script>
+    // ── NAV: Add .scrolled class on scroll ──────────────────────
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ── MOBILE MENU ─────────────────────────────────────────────
+    const navToggle   = document.getElementById('navToggle');
+    const mobileMenu  = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    navToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
+    mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // ── SCROLL REVEAL (IntersectionObserver) ────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ── GALLERY FILTER ──────────────────────────────────────────
+    const filterBtns   = document.querySelectorAll('.gallery__filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery__item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.dataset.cat === filter) {
+            item.classList.remove('gallery__item--hidden');
+          } else {
+            item.classList.add('gallery__item--hidden');
+          }
+        });
+      });
+    });
+
+    // ── ACTIVE NAV LINK on scroll ───────────────────────────────
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks  = document.querySelectorAll('.nav__links a');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.style.color = '';
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.style.color = 'var(--olive-dark)';
+            }
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // ── LIGHTBOX / CAROUSEL ─────────────────────────────────────
+    const lightbox  = document.getElementById('lightbox');
+    const lbImg     = document.getElementById('lbImg');
+    const lbCaption = document.getElementById('lbCaption');
+    const lbCounter = document.getElementById('lbCounter');
+    const lbPrev    = document.getElementById('lbPrev');
+    const lbNext    = document.getElementById('lbNext');
+    const lbClose   = document.getElementById('lbClose');
+
+    let lbItems = [];  // visible items in current filter
+    let lbIndex = 0;
+
+    function getVisibleItems() {
+      return Array.from(galleryItems).filter(item => !item.classList.contains('gallery__item--hidden'));
+    }
+
+    function openLightbox(clickedItem) {
+      lbItems = getVisibleItems();
+      lbIndex = lbItems.indexOf(clickedItem);
+      showSlide(lbIndex);
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+
+    function showSlide(index) {
+      const item  = lbItems[index];
+      const thumb = item.querySelector('.gallery__thumb img');
+      const title = item.querySelector('.gallery__item-title');
+      const cat   = item.querySelector('.gallery__cat-tag');
+
+      // Swap sz=w800 → sz=w1600 for full-res in lightbox
+      const hiResSrc = thumb.src.replace('sz=w800', 'sz=w1600');
+      lbImg.style.opacity = '0';
+      lbImg.src = hiResSrc;
+      lbImg.alt = thumb.alt;
+      lbImg.onload = () => { lbImg.style.opacity = '1'; };
+
+      lbCaption.innerHTML = (cat ? '<strong>' + cat.textContent + '</strong> &nbsp;·&nbsp; ' : '') + (title ? title.textContent : '');
+      lbCounter.textContent = (index + 1) + ' / ' + lbItems.length;
+    }
+
+    function prevSlide() {
+      lbIndex = (lbIndex - 1 + lbItems.length) % lbItems.length;
+      showSlide(lbIndex);
+    }
+
+    function nextSlide() {
+      lbIndex = (lbIndex + 1) % lbItems.length;
+      showSlide(lbIndex);
+    }
+
+    // Attach click to every gallery item (thumb + overlay button)
+    galleryItems.forEach(item => {
+      const thumb   = item.querySelector('.gallery__thumb');
+      const overlay = item.querySelector('.gallery__overlay');
+      [thumb, overlay].forEach(el => {
+        if (el) el.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openLightbox(item);
+        });
+      });
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', prevSlide);
+    lbNext.addEventListener('click', nextSlide);
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowLeft')   prevSlide();
+      if (e.key === 'ArrowRight')  nextSlide();
+    });
+  </script>
+
+  <!--
+  ================================================================
+  GUIDE FOR NON-TECHNICAL USERS — READ THIS
+  ================================================================
+
+  FILES CHANGED:
+  - index.html  ← This is the entire website. One file.
+
+  HOW TO PREVIEW IN YOUR BROWSER:
+  1. Double-click "index.html" to open it in Chrome/Edge/Firefox.
+     That's it. No installation needed.
+
+  HOW TO ADD REAL PHOTOS:
+  1. In the same folder as index.html, create a folder called "images"
+  2. Inside "images", create three sub-folders:
+     • art-direction
+     • photography
+     • healthcare
+  3. Copy your photos into those folders
+  4. In this file, find the gallery items and look for the comments
+     that say "REPLACE:" — follow those instructions exactly.
+  Example: replace the placeholder div with:
+     <img src="images/photography/my-photo.jpg" alt="My Photo">
+
+  HOW TO CHANGE TEXT:
+  - Use Ctrl+F (Windows) or Cmd+F (Mac) to search for any text
+    you want to change, then edit it directly.
+  - Look for "<!-- EDIT:" comments — those mark spots you should update.
+
+  HOW TO ADD MORE COMPANY LOGOS:
+  1. Go to the BRANDS section (search for "ADD MORE COMPANY CARDS HERE")
+  2. Copy one of the existing .brands__card blocks
+  3. Paste it below the last card
+  4. Change the two-letter abbreviation and company name
+  5. To use a real logo image: replace the letters with
+     <img src="images/logos/company.png" alt="Company Name">
+
+  HOW TO ADD MORE GALLERY ITEMS:
+  1. Find "ADD MORE GALLERY ITEMS" in this file
+  2. Copy any gallery item block (from <div class="gallery__item"> to </div>)
+  3. Change: data-cat (art / photo / healthcare), image path, category tag, title
+
+  HOW TO UPDATE CONTACT INFO:
+  - Search for "your@email.com" and replace with real email (appears 3 times)
+  - Search for "+971 00 000 0000" and replace with real phone number
+  - Search for "linkedin.com/in/your-profile" and add real LinkedIn URL
+  - Search for "instagram.com/your-handle" and add real Instagram URL
+
+  ================================================================
+  -->
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/971559269468?text=Hello%20Mohammad%2C%20I%20viewed%20your%20portfolio%20website%20and%20would%20like%20to%20connect." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+</body>
+</html>

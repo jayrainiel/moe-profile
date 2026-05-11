@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00c4cc"/>
+      <stop offset="100%" stop-color="#7d2ae8"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#cg)"/>
+  <!-- Canva C mark -->
+  <path d="M 68,50 A 22,22 0 1,1 56.5,28.9" fill="none" stroke="white" stroke-width="11" stroke-linecap="round"/>
+</svg>
