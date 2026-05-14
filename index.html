@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -1456,6 +1456,45 @@
       .hero__ctas { flex-direction: column; align-items: flex-start; }
       .footer__bottom { flex-direction: column; align-items: flex-start; }
       .case-studies__grid { grid-template-columns: 1fr; }
+
+      /* ── Hero mobile: full-screen photo, text anchored at bottom ── */
+      .hero {
+        min-height: 100svh;
+        min-height: 100vh;
+      }
+      .hero__photo-wrap {
+        width: 100%;
+        left: 0;
+      }
+      .hero__photo-img {
+        object-position: center top;
+        transform: scale(1.05);
+        transform-origin: center top;
+      }
+      /* Swap gradient: dark at bottom so text is readable, fade to transparent top */
+      .hero::before {
+        background: linear-gradient(
+          to top,
+          #0b0b08            0%,
+          #0b0b08            28%,
+          rgba(11,11,8,0.85) 45%,
+          rgba(11,11,8,0.35) 62%,
+          rgba(11,11,8,0.08) 78%,
+          transparent        100%
+        );
+      }
+      /* Push text to bottom of hero */
+      .hero__container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-top: 0;
+        padding-bottom: 3rem;
+        align-items: flex-end;
+      }
+      .hero__content { max-width: 100%; }
+      .hero__name { font-size: clamp(2.4rem, 11vw, 3.8rem); }
     }
 
     @media (max-width: 480px) {
@@ -1600,9 +1639,9 @@
         <a href="#" class="nav__logo">Mohammad <span>Alhaj Younes</span></a>
 
         <ul class="nav__links">
-          <li><a href="about.html">About</a></li>
-          <li><a href="expertise.html">Expertise</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/expertise">Expertise</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
           <li><a href="#case-studies">Work</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1619,9 +1658,9 @@
   <!-- Mobile menu -->
   <div class="nav__mobile" id="mobileMenu">
     <button class="nav__mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
-    <a href="about.html" class="mobile-link">About</a>
-    <a href="expertise.html" class="mobile-link">Expertise</a>
-    <a href="portfolio.html" class="mobile-link">Portfolio</a>
+    <a href="/about" class="mobile-link">About</a>
+    <a href="/expertise" class="mobile-link">Expertise</a>
+    <a href="/portfolio" class="mobile-link">Portfolio</a>
     <a href="#case-studies" class="mobile-link">Work</a>
     <a href="#contact" class="mobile-link">Contact</a>
   </div>
@@ -1665,7 +1704,7 @@
         </ul>
 
         <div class="hero__ctas">
-          <a href="portfolio.html" class="btn btn--olive">
+          <a href="/portfolio" class="btn btn--olive">
             View Portfolio
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -1759,7 +1798,7 @@
           </div>
 
           <div class="about-teaser__ctas">
-            <a href="about.html" class="btn btn--primary">
+            <a href="/about" class="btn btn--primary">
               View Full Profile
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -2314,7 +2353,7 @@
             Get In Touch
             <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a href="portfolio.html" class="btn btn--outline-light">View Portfolio</a>
+          <a href="/portfolio" class="btn btn--outline-light">View Portfolio</a>
         </div>
       </div>
     </div>
@@ -2351,10 +2390,10 @@
         <div>
           <p class="footer__col-title">Navigation</p>
           <ul class="footer__links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="expertise.html">Expertise</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/expertise">Expertise</a></li>
             <li><a href="#brands">Experience</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
             <li><a href="#case-studies">Case Studies</a></li>
           </ul>
         </div>
@@ -2717,3 +2756,4 @@
 
 </body>
 </html>
+
