@@ -365,12 +365,13 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        100deg,
-        #0b0b08 0%,
-        #0b0b08 36%,
-        rgba(11,11,8,0.88) 50%,
-        rgba(11,11,8,0.35) 66%,
-        transparent 100%
+        to right,
+        #0b0b08            0%,
+        #0b0b08            48%,
+        rgba(11,11,8,0.75) 58%,
+        rgba(11,11,8,0.30) 70%,
+        rgba(11,11,8,0.05) 82%,
+        transparent        92%
       );
       z-index: 1;
       pointer-events: none;
@@ -392,9 +393,9 @@
     .hero__photo-wrap {
       position: absolute;
       right: 0;
-      bottom: 0;
       top: 0;
-      width: 54%;
+      bottom: 0;
+      width: 52%;
       z-index: 0;
       overflow: hidden;
     }
@@ -403,10 +404,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: 42% top;
       display: block;
       transform: scale(1.4);
-      transform-origin: center top;
+      transform-origin: 42% top;
     }
 
     .hero__container {
@@ -2638,7 +2639,7 @@
         // Hero photo moves at 25% scroll speed — appears to float further back
         if (heroPhoto) {
           const cap = Math.min(window.scrollY, heroEl.offsetHeight);
-          heroPhoto.style.transform = `scale(1.4) translate3d(0, ${cap * 0.25}px, 0)`;
+          heroPhoto.style.transform = `scale(1.4) translate3d(0, ${cap * 0.22}px, 0)`;
         }
 
         sectionParallax(aboutImg,   0.08);
