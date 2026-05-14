@@ -1457,11 +1457,12 @@
       .footer__bottom { flex-direction: column; align-items: flex-start; }
       .case-studies__grid { grid-template-columns: 1fr; }
 
-      /* ── Hero mobile: full-screen photo, text anchored at bottom ── */
+      /* ── Hero mobile: full-screen photo, text at bottom ── */
       .hero {
         min-height: 100svh;
         min-height: 100vh;
       }
+      /* Photo expands to fill full width */
       .hero__photo-wrap {
         width: 100%;
         left: 0;
@@ -1471,30 +1472,29 @@
         transform: scale(1.05);
         transform-origin: center top;
       }
-      /* Swap gradient: dark at bottom so text is readable, fade to transparent top */
+      /* Gradient: dark at bottom for text legibility, transparent at top to show face */
       .hero::before {
         background: linear-gradient(
           to top,
           #0b0b08            0%,
-          #0b0b08            28%,
-          rgba(11,11,8,0.85) 45%,
-          rgba(11,11,8,0.35) 62%,
-          rgba(11,11,8,0.08) 78%,
+          #0b0b08            30%,
+          rgba(11,11,8,0.88) 48%,
+          rgba(11,11,8,0.40) 64%,
+          rgba(11,11,8,0.10) 80%,
           transparent        100%
         );
       }
-      /* Push text to bottom of hero */
+      /* Stay in flex flow (flex:1 already set), push content to bottom */
       .hero__container {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding-top: 0;
-        padding-bottom: 3rem;
+        position: relative;
+        padding-top: 5rem;
+        padding-bottom: 1.5rem;
         align-items: flex-end;
       }
       .hero__content { max-width: 100%; }
       .hero__name { font-size: clamp(2.4rem, 11vw, 3.8rem); }
+      /* Hide bottom stat strip on mobile — stats-band section covers this */
+      .hero__footer { display: none; }
     }
 
     @media (max-width: 480px) {
