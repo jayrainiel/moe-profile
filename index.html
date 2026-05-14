@@ -1492,6 +1492,13 @@
       .wa-float svg { width: 24px; height: 24px; }
       .wa-float::before { display: none; }
     }
+
+    /* ── PARALLAX targets — GPU layer hint ── */
+    .hero__photo-img,
+    .about-teaser__photo img,
+    .expertise__grid {
+      will-change: transform;
+    }
   </style>
 </head>
 
@@ -2485,6 +2492,54 @@
       if (e.key === 'ArrowLeft')   prevSlide();
       if (e.key === 'ArrowRight')  nextSlide();
     });
+
+    // ── PARALLAX (hero photo · about portrait · expertise grid) ──
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const heroEl     = document.getElementById('hero');
+      const heroPhoto  = document.querySelector('.hero__photo-img');
+      const aboutImg   = document.querySelector('.about-teaser__photo img');
+      const expertGrid = document.querySelector('.expertise__grid');
+
+      let ticking = false;
+
+      function sectionParallax(el, speed) {
+        if (!el) return;
+        const rect   = el.getBoundingClientRect();
+        const center = rect.top + rect.height / 2;
+        const offset = (window.innerHeight / 2 - center) * speed;
+        el.style.transform = `translate3d(0, ${offset}px, 0)`;
+      }
+
+      function applyParallax() {
+        if (window.innerWidth < 768) {
+          if (heroPhoto)  heroPhoto.style.transform  = '';
+          if (aboutImg)   aboutImg.style.transform   = '';
+          if (expertGrid) expertGrid.style.transform = '';
+          ticking = false;
+          return;
+        }
+
+        // Hero photo moves at 25% scroll speed — appears to float further back
+        if (heroPhoto) {
+          const cap = Math.min(window.scrollY, heroEl.offsetHeight);
+          heroPhoto.style.transform = `translate3d(0, ${cap * 0.25}px, 0)`;
+        }
+
+        sectionParallax(aboutImg,   0.08);
+        sectionParallax(expertGrid, 0.07);
+
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(applyParallax);
+          ticking = true;
+        }
+      }, { passive: true });
+    }());
   </script>
 
   <!--
