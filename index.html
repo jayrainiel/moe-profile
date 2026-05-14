@@ -1493,6 +1493,80 @@
       .wa-float::before { display: none; }
     }
 
+    /* ── INTRO SPLASH SCREEN ── */
+    #intro-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #0b0b08;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      will-change: transform;
+    }
+    /* thin olive wipe-line at the bottom edge — sweeps across as panel slides up */
+    #intro-screen::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--olive) 30%, var(--olive-light) 50%, var(--olive) 70%, transparent 100%);
+      pointer-events: none;
+    }
+    .intro__inner {
+      text-align: center;
+      padding: 2rem;
+    }
+    .intro__first {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 9vw, 7rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--olive-light);
+      opacity: 0;
+      transform: translateY(24px);
+      animation: introWord 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+    }
+    .intro__last {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 9vw, 7rem);
+      font-weight: 700;
+      color: #ffffff;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: introWord 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+    }
+    .intro__line {
+      width: 0;
+      height: 1px;
+      background: var(--olive);
+      margin: 1.5rem auto;
+      animation: introLine 0.7s ease 1.2s forwards;
+    }
+    .intro__tagline {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--olive-light);
+      opacity: 0;
+      animation: introFade 0.6s ease 1.6s forwards;
+    }
+    @keyframes introWord {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes introLine {
+      to { width: 180px; }
+    }
+    @keyframes introFade {
+      to { opacity: 0.65; }
+    }
+
     /* ── PARALLAX targets — GPU layer hint ── */
     .hero__photo-img,
     .about-teaser__photo img,
@@ -1503,6 +1577,16 @@
 </head>
 
 <body>
+
+  <!-- INTRO SPLASH -->
+  <div id="intro-screen" aria-hidden="true">
+    <div class="intro__inner">
+      <span class="intro__first">Mohammad</span>
+      <span class="intro__last">Alhaj Younes</span>
+      <div class="intro__line"></div>
+      <p class="intro__tagline">Healthcare Marketing &nbsp;·&nbsp; Brand Strategy &nbsp;·&nbsp; Photography</p>
+    </div>
+  </div>
 
   <!-- ============================================================
        NAVIGATION
@@ -2338,6 +2422,34 @@
        JAVASCRIPT
        ============================================================ -->
   <script>
+    // ── INTRO SPLASH ────────────────────────────────────────────
+    (function () {
+      const intro = document.getElementById('intro-screen');
+      if (!intro) return;
+      document.body.style.overflow = 'hidden';
+
+      const contentEls = intro.querySelectorAll('.intro__first, .intro__last, .intro__line, .intro__tagline');
+
+      // Step 1 — content drifts up and fades out (2.0s)
+      setTimeout(function () {
+        contentEls.forEach(function (el) {
+          el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          el.style.opacity    = '0';
+          el.style.transform  = 'translateY(-18px)';
+        });
+      }, 2000);
+
+      // Step 2 — dark panel slides up, revealing homepage (2.55s)
+      setTimeout(function () {
+        intro.style.transition = 'transform 1.05s cubic-bezier(0.87, 0, 0.13, 1)';
+        intro.style.transform  = 'translateY(-100%)';
+        document.body.style.overflow = '';
+      }, 2550);
+
+      // Step 3 — remove from DOM once offscreen (3.7s)
+      setTimeout(function () { intro.remove(); }, 3700);
+    }());
+
     // ── NAV: Add .scrolled class on scroll ──────────────────────
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
