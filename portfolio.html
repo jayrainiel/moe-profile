@@ -80,7 +80,7 @@
     .port-banner__stat-val{font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--white)}
     .port-banner__stat-lbl{font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase}
     /* JUMP NAV */
-    .port-jumps{background-color:var(--near-black);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:68px;z-index:900}
+    .port-jumps{background-color:var(--near-black);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:calc(68px + 54px);z-index:900;transition:opacity .2s}
     .port-jumps__inner{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
     .port-jumps__inner::-webkit-scrollbar{display:none}
     .port-jump{flex-shrink:0;padding:1.1rem 1.6rem;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.35);border-bottom:2px solid transparent;transition:all .22s;white-space:nowrap;cursor:pointer}
@@ -131,6 +131,12 @@
     .footer__links a{font-size:.85rem;color:rgba(255,255,255,.45);transition:color .2s}
     .footer__links a:hover{color:var(--olive-light)}
     .footer__copy{font-size:.78rem;color:rgba(255,255,255,.25);border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem}
+    /* ── TWO-LEVEL PORTFOLIO NAV ── */
+    .port-level1{background-color:#0b0b08;border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:68px;z-index:902}
+    .port-level1__inner{display:flex;gap:0}
+    .port-l1-btn{flex-shrink:0;padding:1.2rem 2.8rem;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;background:none;cursor:pointer;transition:all .22s;white-space:nowrap}
+    .port-l1-btn:hover{color:rgba(255,255,255,.75)}
+    .port-l1-btn.active{color:var(--olive-light);border-bottom-color:var(--olive-light)}
     /* RESPONSIVE */
     @media(max-width:1024px){.port-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:768px){
@@ -218,7 +224,7 @@
         <h1 class="port-banner__title">Every Frame<br><em>Tells a Story.</em></h1>
         <p class="port-banner__sub">
           Baby &nbsp;&middot;&nbsp; Wedding &nbsp;&middot;&nbsp; Nature &nbsp;&middot;&nbsp; Food &nbsp;&middot;&nbsp; Portrait &nbsp;&middot;&nbsp; Corporate<br>
-          307 photographs spanning 18+ years of professional work across the UAE and beyond.
+          302 photographs spanning 18+ years of professional work across the UAE and beyond.
         </p>
         <div class="port-banner__stats">
           <div><div class="port-banner__stat-val">307</div><div class="port-banner__stat-lbl">Photographs</div></div>
@@ -229,8 +235,18 @@
     </div>
   </section>
 
+  <!-- Level 1: mode selector -->
+  <div class="port-level1" id="portLevel1">
+    <div class="container">
+      <div class="port-level1__inner">
+        <button class="port-l1-btn" data-mode="graphic-design" id="btnGD">Graphic Design</button>
+        <button class="port-l1-btn active" data-mode="photography" id="btnPhoto">Photography</button>
+      </div>
+    </div>
+  </div>
+
   <!-- JUMP NAV -->
-  <nav class="port-jumps">
+  <nav class="port-jumps" id="portJumps">
     <div class="container">
       <div class="port-jumps__inner">
         <a href="#baby"      class="port-jump active">Baby Photography</a>
@@ -243,6 +259,261 @@
     </div>
   </nav>
 
+  <!-- == GRAPHIC DESIGN == -->
+  <section class="port-category" id="graphic-design" style="display:none">
+    <div class="container">
+      <div class="port-cat__header">
+        <div>
+          <p class="label" style="color:var(--olive);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase">Graphic Design</p>
+          <h2 class="port-cat__title" style="margin-top:.5rem">Visual Communication<br>that Drives Results.</h2>
+          <p class="port-cat__count">Campaigns · Brochures · Brand Identity</p>
+        </div>
+      </div>
+      <div class="port-grid">
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Abu%20Dhabi%20Airport%20Ad%20%281%29.jpg" data-title="Abu Dhabi Airport Ad" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Abu%20Dhabi%20Airport%20Ad%20%281%29.jpg" alt="Abu Dhabi Airport Ad" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Abu Dhabi Airport Ad</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Abu%20Dhabi%20Airport%20Ad%20%282%29.jpg" data-title="Abu Dhabi Airport Ad" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Abu%20Dhabi%20Airport%20Ad%20%282%29.jpg" alt="Abu Dhabi Airport Ad" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Abu Dhabi Airport Ad</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%281%29.jpg" data-title="Al Noor Conferences" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%281%29.jpg" alt="Al Noor Conferences" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Conferences</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%282%29.jpg" data-title="Al Noor Conferences" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%282%29.jpg" alt="Al Noor Conferences" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Conferences</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%283%29.jpg" data-title="Al Noor Conferences" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%283%29.jpg" alt="Al Noor Conferences" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Conferences</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%284%29.jpg" data-title="Al Noor Conferences" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%284%29.jpg" alt="Al Noor Conferences" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Conferences</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%285%29.jpg" data-title="Al Noor Conferences" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Conferences%20%285%29.jpg" alt="Al Noor Conferences" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Conferences</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%281%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%281%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%282%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%282%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%283%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%283%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%284%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%284%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%285%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%285%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%286%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%286%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%287%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%287%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%288%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%288%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%289%29.jpg" data-title="Al Noor Hospital Corporate Brochure" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Corporate%20brochure%20%289%29.jpg" alt="Al Noor Hospital Corporate Brochure" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Corporate Brochure</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Menu%20%281%29.jpg" data-title="Al Noor Hospital Menu" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Menu%20%281%29.jpg" alt="Al Noor Hospital Menu" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Menu</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Menu%20%282%29.jpg" data-title="Al Noor Hospital Menu" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Menu%20%282%29.jpg" alt="Al Noor Hospital Menu" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Menu</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Menu%20%283%29.jpg" data-title="Al Noor Hospital Menu" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor%20Hospital%20Menu%20%283%29.jpg" alt="Al Noor Hospital Menu" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor Hospital Menu</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Al%20Noor.jpg" data-title="Al Noor" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Al%20Noor.jpg" alt="Al Noor" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Al Noor</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/American%20Center%20%281%29.jpg" data-title="American Center" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/American%20Center%20%281%29.jpg" alt="American Center" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">American Center</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/American%20Center%20%282%29.jpg" data-title="American Center" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/American%20Center%20%282%29.jpg" alt="American Center" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">American Center</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/American%20Center%20%283%29.jpg" data-title="American Center" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/American%20Center%20%283%29.jpg" alt="American Center" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">American Center</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Brest%20Feeding.jpg" data-title="Breastfeeding Awareness" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Brest%20Feeding.jpg" alt="Breastfeeding Awareness" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Breastfeeding Awareness</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Calvi%20Optical%20Glasses%20%281%29.jpg" data-title="Calvi Optical Glasses" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Calvi%20Optical%20Glasses%20%281%29.jpg" alt="Calvi Optical Glasses" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Calvi Optical Glasses</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Calvi%20Optical%20Glasses%20%281%29.png" data-title="Calvi Optical Glasses" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Calvi%20Optical%20Glasses%20%281%29.png" alt="Calvi Optical Glasses" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Calvi Optical Glasses</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Calvi%20Optical%20Glasses%20%282%29.jpg" data-title="Calvi Optical Glasses" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Calvi%20Optical%20Glasses%20%282%29.jpg" alt="Calvi Optical Glasses" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Calvi Optical Glasses</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Calvi%20Optical%20Glasses%20%283%29.jpg" data-title="Calvi Optical Glasses" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Calvi%20Optical%20Glasses%20%283%29.jpg" alt="Calvi Optical Glasses" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Calvi Optical Glasses</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Capital%20Ambulance%20Company%20Profile%20UAE.jpeg" data-title="Capital Ambulance Company Profile" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Capital%20Ambulance%20Company%20Profile%20UAE.jpeg" alt="Capital Ambulance Company Profile" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Capital Ambulance Company Profile</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Capital%20Ambulance%20Company%20Profile%20UAE.jpg" data-title="Capital Ambulance Company Profile" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Capital%20Ambulance%20Company%20Profile%20UAE.jpg" alt="Capital Ambulance Company Profile" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Capital Ambulance Company Profile</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/CoolKids.jpg" data-title="CoolKids Campaign" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/CoolKids.jpg" alt="CoolKids Campaign" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">CoolKids Campaign</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Corporate%20Website%20Mockup.jpeg" data-title="Corporate Website Mockup" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Corporate%20Website%20Mockup.jpeg" alt="Corporate Website Mockup" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Corporate Website Mockup</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Corporate%20Company%20Profile%20Visual.jpeg" data-title="Corporate Company Profile" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Corporate%20Company%20Profile%20Visual.jpeg" alt="Corporate Company Profile" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Corporate Company Profile</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Dermatoloty.jpg" data-title="Dermatology Campaign" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Dermatoloty.jpg" alt="Dermatology Campaign" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Dermatology Campaign</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%281%29.jpg" data-title="Le Damas Sweet Profile" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%281%29.jpg" alt="Le Damas Sweet Profile" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Le Damas Sweet Profile</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%282%29.jpg" data-title="Le Damas Sweet Profile" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%282%29.jpg" alt="Le Damas Sweet Profile" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Le Damas Sweet Profile</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%283%29.jpg" data-title="Le Damas Sweet Profile" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%283%29.jpg" alt="Le Damas Sweet Profile" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Le Damas Sweet Profile</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%284%29.jpg" data-title="Le Damas Sweet Profile" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%284%29.jpg" alt="Le Damas Sweet Profile" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Le Damas Sweet Profile</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%285%29.jpg" data-title="Le Damas Sweet Profile" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Le%20Damas%20Sweet%20Profile%20%285%29.jpg" alt="Le Damas Sweet Profile" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Le Damas Sweet Profile</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/Mediclinic%20-%20AL%20Noor%20Al%20Ain.jpg" data-title="Mediclinic – Al Noor Al Ain" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/Mediclinic%20-%20AL%20Noor%20Al%20Ain.jpg" alt="Mediclinic – Al Noor Al Ain" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Mediclinic – Al Noor Al Ain</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/tumblr_oax17qV5aU1qfw0evo4_1280%20%281%29.jpg" data-title="Brand Design" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/tumblr_oax17qV5aU1qfw0evo4_1280%20%281%29.jpg" alt="Brand Design" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Brand Design</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/tumblr_oax17qV5aU1qfw0evo4_1280.jpg" data-title="Brand Design" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/tumblr_oax17qV5aU1qfw0evo4_1280.jpg" alt="Brand Design" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Brand Design</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/tumblr_oax1yfbuAw1qfw0evo3_1280.jpg" data-title="Marketing Collateral" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/tumblr_oax1yfbuAw1qfw0evo3_1280.jpg" alt="Marketing Collateral" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Marketing Collateral</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/tumblr_oax3q8LoLz1qfw0evo2_1280.jpg" data-title="Marketing Collateral" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/tumblr_oax3q8LoLz1qfw0evo2_1280.jpg" alt="Marketing Collateral" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Marketing Collateral</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/tumblr_oayrq4jRbm1qfw0evo3_1280.jpg" data-title="Visual Identity" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/tumblr_oayrq4jRbm1qfw0evo3_1280.jpg" alt="Visual Identity" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Visual Identity</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/tumblr_ob69wpqUrg1qfw0evo1_1280.jpg" data-title="Visual Identity" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/tumblr_ob69wpqUrg1qfw0evo1_1280.jpg" alt="Visual Identity" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Visual Identity</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/tumblr_ojntcr0ooQ1qfw0evo2_1280.jpg" data-title="Creative Direction" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/tumblr_ojntcr0ooQ1qfw0evo2_1280.jpg" alt="Creative Direction" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Creative Direction</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-src="images/photography/Graphic%20Design/tumblr_ojntcr0ooQ1qfw0evo3_1280.jpg" data-title="Creative Direction" data-cat="Graphic Design">
+          <div class="port-thumb"><img src="images/photography/Graphic%20Design/tumblr_ojntcr0ooQ1qfw0evo3_1280.jpg" alt="Creative Direction" loading="lazy"></div>
+          <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Creative Direction</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- == BABY == -->
   <section class="port-category" id="baby">
     <div class="container">
@@ -251,7 +522,7 @@
           <p class="label">01</p>
           <div style="width:40px;height:2px;background:var(--olive);margin:.8rem 0 .95rem"></div>
           <h2 class="port-cat__title">Baby Photography</h2>
-          <p class="port-cat__count">113 photographs</p>
+          <p class="port-cat__count">111 photographs</p>
         </div>
         <p class="port-cat__desc">Tender, timeless portraits capturing the earliest moments of life â€” crafted with patience, natural light, and an artistic eye.</p>
       </div>
@@ -265,16 +536,6 @@
           <div class="port-caption">
             <p class="port-caption__cat">Baby Photography</p>
             <p class="port-caption__title">Baby Photography</p>
-          </div>
-        </div>
-        <div class="port-item reveal reveal-delay-1" data-section="baby" data-src="images/photography/baby%20photography/041%20bw%20with%20logo.jpg" data-title="041 Bw" data-cat="Baby Photography">
-          <div class="port-thumb">
-            <img src="images/photography/baby%20photography/041%20bw%20with%20logo.jpg" loading="lazy" alt="041 Bw" />
-            <div class="port-overlay"><span class="port-overlay__btn">View Photo</span></div>
-          </div>
-          <div class="port-caption">
-            <p class="port-caption__cat">Baby Photography</p>
-            <p class="port-caption__title">041 Bw</p>
           </div>
         </div>
         <div class="port-item reveal reveal-delay-2" data-section="baby" data-src="images/photography/baby%20photography/16%20with%20logo.jpg" data-title="Baby Photography" data-cat="Baby Photography">
@@ -1000,16 +1261,6 @@
         <div class="port-item reveal reveal-delay-2" data-section="baby" data-src="images/photography/baby%20photography/65%20with%20logo.jpg" data-title="Baby Photography" data-cat="Baby Photography">
           <div class="port-thumb">
             <img src="images/photography/baby%20photography/65%20with%20logo.jpg" loading="lazy" alt="Baby Photography" />
-            <div class="port-overlay"><span class="port-overlay__btn">View Photo</span></div>
-          </div>
-          <div class="port-caption">
-            <p class="port-caption__cat">Baby Photography</p>
-            <p class="port-caption__title">Baby Photography</p>
-          </div>
-        </div>
-        <div class="port-item reveal reveal-delay-3" data-section="baby" data-src="images/photography/baby%20photography/67%20with%20logo.jpg" data-title="Baby Photography" data-cat="Baby Photography">
-          <div class="port-thumb">
-            <img src="images/photography/baby%20photography/67%20with%20logo.jpg" loading="lazy" alt="Baby Photography" />
             <div class="port-overlay"><span class="port-overlay__btn">View Photo</span></div>
           </div>
           <div class="port-caption">
@@ -1827,7 +2078,7 @@
           <p class="label">03</p>
           <div style="width:40px;height:2px;background:var(--olive);margin:.8rem 0 .95rem"></div>
           <h2 class="port-cat__title">Nature &amp; Landscape</h2>
-          <p class="port-cat__count">21 photographs</p>
+          <p class="port-cat__count">18 photographs</p>
         </div>
         <p class="port-cat__desc">Sweeping UAE landscapes, dramatic skies, and natural beauty â€” panoramic visions captured across the region with professional precision.</p>
       </div>
@@ -1881,26 +2132,6 @@
           <div class="port-caption">
             <p class="port-caption__cat">Nature &amp; Landscape</p>
             <p class="port-caption__title">Dsc 8659</p>
-          </div>
-        </div>
-        <div class="port-item reveal reveal-delay-1" data-section="nature" data-src="images/photography/MIX%20photography/DSC_86599.jpg" data-title="Dsc 86599" data-cat="Nature &amp; Landscape">
-          <div class="port-thumb">
-            <img src="images/photography/MIX%20photography/DSC_86599.jpg" loading="lazy" alt="Dsc 86599" />
-            <div class="port-overlay"><span class="port-overlay__btn">View Photo</span></div>
-          </div>
-          <div class="port-caption">
-            <p class="port-caption__cat">Nature &amp; Landscape</p>
-            <p class="port-caption__title">Dsc 86599</p>
-          </div>
-        </div>
-        <div class="port-item reveal reveal-delay-2" data-section="nature" data-src="images/photography/MIX%20photography/DSC_8681.jpg" data-title="Dsc 8681" data-cat="Nature &amp; Landscape">
-          <div class="port-thumb">
-            <img src="images/photography/MIX%20photography/DSC_8681.jpg" loading="lazy" alt="Dsc 8681" />
-            <div class="port-overlay"><span class="port-overlay__btn">View Photo</span></div>
-          </div>
-          <div class="port-caption">
-            <p class="port-caption__cat">Nature &amp; Landscape</p>
-            <p class="port-caption__title">Dsc 8681</p>
           </div>
         </div>
         <div class="port-item reveal reveal-delay-3" data-section="nature" data-src="images/photography/MIX%20photography/DSC_878223.jpg" data-title="Dsc 878223" data-cat="Nature &amp; Landscape">
@@ -1961,16 +2192,6 @@
           <div class="port-caption">
             <p class="port-caption__cat">Nature &amp; Landscape</p>
             <p class="port-caption__title">Dsc 8886</p>
-          </div>
-        </div>
-        <div class="port-item reveal reveal-delay-1" data-section="nature" data-src="images/photography/MIX%20photography/DSC_8902-crop.jpg" data-title="Dsc 8902" data-cat="Nature &amp; Landscape">
-          <div class="port-thumb">
-            <img src="images/photography/MIX%20photography/DSC_8902-crop.jpg" loading="lazy" alt="Dsc 8902" />
-            <div class="port-overlay"><span class="port-overlay__btn">View Photo</span></div>
-          </div>
-          <div class="port-caption">
-            <p class="port-caption__cat">Nature &amp; Landscape</p>
-            <p class="port-caption__title">Dsc 8902</p>
           </div>
         </div>
         <div class="port-item reveal reveal-delay-2" data-section="nature" data-src="images/photography/MIX%20photography/DSC_8915.jpg" data-title="Dsc 8915" data-cat="Nature &amp; Landscape">
@@ -3473,8 +3694,34 @@
     }, { threshold: 0.06 });
     revealEls.forEach(el => ro.observe(el));
 
-    // â”€â”€ JUMP NAV ACTIVE STATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    const sections = document.querySelectorAll('.port-category');
+    // u{2500}u{2500} TWO-LEVEL NAV u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}
+    const btnGD      = document.getElementById('btnGD');
+    const btnPhoto   = document.getElementById('btnPhoto');
+    const portJumps  = document.getElementById('portJumps');
+    const gdSection  = document.getElementById('graphic-design');
+    const photoSects = document.querySelectorAll('.port-category:not(#graphic-design)');
+
+    function setMode(mode) {
+      if (mode === 'graphic-design') {
+        btnGD.classList.add('active');    btnPhoto.classList.remove('active');
+        portJumps.style.display = 'none';
+        gdSection.style.display = '';
+        photoSects.forEach(s => s.style.display = 'none');
+      } else {
+        btnPhoto.classList.add('active'); btnGD.classList.remove('active');
+        portJumps.style.display = '';
+        gdSection.style.display = 'none';
+        photoSects.forEach(s => s.style.display = '');
+        // scroll to first photography section
+        window.scrollTo({ top: document.getElementById('baby').offsetTop - 150, behavior: 'smooth' });
+      }
+    }
+
+    btnGD.addEventListener('click',    () => setMode('graphic-design'));
+    btnPhoto.addEventListener('click', () => setMode('photography'));
+
+    // u{2500}u{2500} JUMP NAV ACTIVE STATE u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}
+    const sections = document.querySelectorAll('.port-category:not(#graphic-design)');
     const jumps    = document.querySelectorAll('.port-jump');
     const so = new IntersectionObserver(entries => {
       entries.forEach(e => {
