@@ -405,6 +405,8 @@
       object-fit: cover;
       object-position: center top;
       display: block;
+      transform: scale(1.4);
+      transform-origin: center top;
     }
 
     .hero__container {
@@ -1633,7 +1635,7 @@
     <div class="hero__photo-wrap">
       <img
         class="hero__photo-img"
-        src="images/Moe self picture/Mohammad Al Hajyounes.png"
+        src="images/Moe self picture/Mohammad Alhaj Younes.jpeg"
         alt="Mohammad Alhaj Younes"
       />
     </div>
@@ -2636,7 +2638,7 @@
         // Hero photo moves at 25% scroll speed — appears to float further back
         if (heroPhoto) {
           const cap = Math.min(window.scrollY, heroEl.offsetHeight);
-          heroPhoto.style.transform = `translate3d(0, ${cap * 0.25}px, 0)`;
+          heroPhoto.style.transform = `scale(1.4) translate3d(0, ${cap * 0.25}px, 0)`;
         }
 
         sectionParallax(aboutImg,   0.08);
