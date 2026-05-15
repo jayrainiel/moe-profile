@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -117,8 +117,7 @@
     .lightbox__inner{position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5rem 6rem;gap:1rem}
     .lightbox__counter{position:absolute;top:1.6rem;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.14em;color:rgba(255,255,255,.25)}
     .lightbox__img-wrap{flex:1;display:flex;align-items:center;justify-content:center;width:100%;min-height:0}
-    .lightbox__img{max-height:100%;max-width:100%;object-fit:contain;border-radius:var(--radius-md);box-shadow:0 24px 80px rgba(0,0,0,.7);animation:lbIn .28s ease}
-    @keyframes lbIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+    .lightbox__img{max-height:100%;max-width:100%;object-fit:contain;border-radius:var(--radius-md);box-shadow:0 24px 80px rgba(0,0,0,.7);transition:opacity .25s ease}
     .lightbox__caption{text-align:center;color:rgba(255,255,255,.38);font-size:.78rem;letter-spacing:.06em;line-height:1.6}
     .lightbox__caption strong{color:rgba(255,255,255,.75);font-weight:600}
     .lightbox__btn{position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .22s;font-size:1.1rem}
@@ -196,15 +195,15 @@
   <nav class="nav" id="nav">
     <div class="container">
       <div class="nav__inner">
-        <a href="/" class="nav__logo">Mohammad <span>Alhaj Younes</span></a>
+        <a href="index.html" class="nav__logo">Mohammad <span>Alhaj Younes</span></a>
         <ul class="nav__links">
-          <li><a href="/about">About</a></li>
-          <li><a href="/expertise">Expertise</a></li>
-          <li><a href="/portfolio" class="active">Portfolio</a></li>
-          <li><a href="/#case-studies">Work</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="index.html#case-studies">Work</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
-        <a href="/#contact" class="btn btn--olive nav__cta">Let&#39;s Connect</a>
+        <a href="index.html#contact" class="btn btn--olive nav__cta">Let&#39;s Connect</a>
         <button class="nav__toggle" id="navToggle" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
@@ -213,10 +212,10 @@
   </nav>
   <div class="nav__mobile" id="mobileMenu">
     <button class="nav__mobile-close" id="mobileClose">&times;</button>
-    <a href="/about">About</a>
-    <a href="/expertise">Expertise</a>
-    <a href="/portfolio">Portfolio</a>
-    <a href="/#contact">Contact</a>
+    <a href="about.html">About</a>
+    <a href="expertise.html">Expertise</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#contact">Contact</a>
   </div>
 
   <!-- BANNER -->
@@ -244,6 +243,7 @@
     <div class="container">
       <div class="port-level1__inner">
         <button class="port-l1-btn" data-mode="graphic-design" id="btnGD">Graphic Design</button>
+        <button class="port-l1-btn" data-mode="ai-vision-lab" id="btnAI">AI Vision Lab</button>
         <button class="port-l1-btn active" data-mode="photography" id="btnPhoto">Photography</button>
       </div>
     </div>
@@ -527,6 +527,876 @@
         <div class="port-item reveal" data-section="graphic-design" data-src="images/photography/Graphic%20Design/Capital%20Ambulance%20Branding.jpeg" data-title="Capital Ambulance Branding" data-cat="Graphic Design">
           <div class="port-thumb"><img src="images/thumbs/Graphic%20Design/Capital%20Ambulance%20Branding.jpeg" alt="Capital Ambulance Branding" loading="lazy" decoding="async"></div>
           <div class="port-caption"><div class="port-caption__cat">Graphic Design</div><div class="port-caption__title">Capital Ambulance Branding</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- == AI VISION LAB == -->
+  <section class="port-category" id="ai-vision-lab" style="display:none">
+    <div class="container">
+      <div class="port-cat__header">
+        <div>
+          <p class="label" style="color:var(--olive);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase">AI Vision Lab</p>
+          <h2 class="port-cat__title" style="margin-top:.5rem">Where AI Meets<br>Creative Vision.</h2>
+          <p class="port-cat__count">AI-Generated · Healthcare Visuals · Brand Imagery</p>
+        </div>
+      </div>
+      <div class="port-grid">
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/1.%2020260119_125830_870.png" data-title="20260119 125830" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/1.%2020260119_125830_870.jpeg" alt="20260119 125830" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 125830</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/1.%2020260119_130212_385.png" data-title="20260119 130212" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/1.%2020260119_130212_385.jpeg" alt="20260119 130212" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 130212</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/1.%2020260119_130325_198.png" data-title="20260119 130325" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/1.%2020260119_130325_198.jpeg" alt="20260119 130325" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 130325</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/1.%2020260119_130408_233.png" data-title="20260119 130408" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/1.%2020260119_130408_233.jpeg" alt="20260119 130408" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 130408</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/10.%2020260119_131303_386.png" data-title="20260119 131303" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/10.%2020260119_131303_386.jpeg" alt="20260119 131303" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 131303</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/13.%2020260119_131329_334.png" data-title="20260119 131329" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/13.%2020260119_131329_334.jpeg" alt="20260119 131329" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 131329</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/14.%2020260119_131329_389.png" data-title="20260119 131329" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/14.%2020260119_131329_389.jpeg" alt="20260119 131329" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 131329</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/2.%2020260119_130214_372.png" data-title="20260119 130214" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/2.%2020260119_130214_372.jpeg" alt="20260119 130214" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 130214</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/2.%2020260119_130325_260.png" data-title="20260119 130325" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/2.%2020260119_130325_260.jpeg" alt="20260119 130325" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 130325</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/2.%2020260119_130408_288.png" data-title="20260119 130408" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/2.%2020260119_130408_288.jpeg" alt="20260119 130408" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 130408</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/3.%2020260119_131213_340.png" data-title="20260119 131213" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/3.%2020260119_131213_340.jpeg" alt="20260119 131213" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 131213</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/9.%2020260119_130055_874.png" data-title="20260119 130055" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/9.%2020260119_130055_874.jpeg" alt="20260119 130055" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">20260119 130055</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/900x1219%20EMERGENCY%20MEDICAL%20AMBULANCE%20SERVICES_.jpg" data-title="900x1219 EMERGENCY MEDICAL AMBULANCE SERVICES" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/900x1219%20EMERGENCY%20MEDICAL%20AMBULANCE%20SERVICES_.jpeg" alt="900x1219 EMERGENCY MEDICAL AMBULANCE SERVICES" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">900x1219 EMERGENCY MEDICAL AMBULANCE SERVICES</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/A%20person%20coughing.jpg" data-title="A person coughing" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/A%20person%20coughing.jpeg" alt="A person coughing" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">A person coughing</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Ambulance%20Leasing%20Service%20brochure%20photo.jpg" data-title="Ambulance Leasing Service brochure photo" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Ambulance%20Leasing%20Service%20brochure%20photo.jpeg" alt="Ambulance Leasing Service brochure photo" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Ambulance Leasing Service brochure photo</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/AMBULANCE%20LEASING%20SERVICES%20-%20%20770%20x%20460.jpg" data-title="AMBULANCE LEASING SERVICES -  770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/AMBULANCE%20LEASING%20SERVICES%20-%20%20770%20x%20460.jpeg" alt="AMBULANCE LEASING SERVICES -  770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AMBULANCE LEASING SERVICES -  770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CA%20Branding%20%281%29.jpeg" data-title="CA Branding" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CA%20Branding%20%281%29.jpeg" alt="CA Branding" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CA Branding</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CA%20Branding%20%281%29.jpg" data-title="CA Branding" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CA%20Branding%20%281%29.jpeg" alt="CA Branding" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CA Branding</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CA%20Branding%20%282%29.jpeg" data-title="CA Branding" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CA%20Branding%20%282%29.jpeg" alt="CA Branding" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CA Branding</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CA%20Branding%20%283%29.jpeg" data-title="CA Branding" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CA%20Branding%20%283%29.jpeg" alt="CA Branding" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CA Branding</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CA%20photo%20car%2010.jpg" data-title="CA photo car" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CA%20photo%20car%2010.jpeg" alt="CA photo car" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CA photo car</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CA%20photo%20nigth%20car%202.jpg" data-title="CA photo nigth car" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CA%20photo%20nigth%20car%202.jpeg" alt="CA photo nigth car" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CA photo nigth car</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CA%20photo%20nigth%20car%203.jpg" data-title="CA photo nigth car" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CA%20photo%20nigth%20car%203.jpeg" alt="CA photo nigth car" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CA photo nigth car</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Capital%20Ambulance%202%20%20770%20x%20460.jpg" data-title="Capital Ambulance 2  770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Capital%20Ambulance%202%20%20770%20x%20460.jpeg" alt="Capital Ambulance 2  770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Capital Ambulance 2  770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CBAHI.jpg" data-title="CBAHI" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CBAHI.jpeg" alt="CBAHI" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CBAHI</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Corporate_website_mockup_present…_202605121154%20%281%29.jpeg" data-title="Corporate website mockup present…" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Corporate_website_mockup_present…_202605121154%20%281%29.jpeg" alt="Corporate website mockup present…" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Corporate website mockup present…</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/CP%20photo%20car%20slowshutter.jpg" data-title="CP photo car slowshutter" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/CP%20photo%20car%20slowshutter.jpeg" alt="CP photo car slowshutter" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">CP photo car slowshutter</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Dietitian%20and%20nutrition%20770%20x%20460.jpg" data-title="Dietitian and nutrition 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Dietitian%20and%20nutrition%20770%20x%20460.jpeg" alt="Dietitian and nutrition 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Dietitian and nutrition 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Dietitian.jpg" data-title="Dietitian" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Dietitian.jpeg" alt="Dietitian" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Dietitian</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/doctor%20on%20call%20770%20x%20460.jpg" data-title="doctor on call 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/doctor%20on%20call%20770%20x%20460.jpeg" alt="doctor on call 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">doctor on call 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/doctor%20visit.jpg" data-title="doctor visit" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/doctor%20visit.jpeg" alt="doctor visit" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">doctor visit</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Elderly.jpg" data-title="Elderly" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Elderly.jpeg" alt="Elderly" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Elderly</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Eldery%20Care%20770%20x%20460.jpg" data-title="Eldery Care 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Eldery%20Care%20770%20x%20460.jpeg" alt="Eldery Care 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Eldery Care 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/emergencey-medical-response-team%20%281%29.png" data-title="emergencey-medical-response-team" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/emergencey-medical-response-team%20%281%29.jpeg" alt="emergencey-medical-response-team" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">emergencey-medical-response-team</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/emergencey-medical-response-team%20%282%29.png" data-title="emergencey-medical-response-team" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/emergencey-medical-response-team%20%282%29.jpeg" alt="emergencey-medical-response-team" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">emergencey-medical-response-team</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/emergencey-medical-response-team%20%283%29.png" data-title="emergencey-medical-response-team" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/emergencey-medical-response-team%20%283%29.jpeg" alt="emergencey-medical-response-team" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">emergencey-medical-response-team</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/emergencey-medical-response-team%20%284%29.png" data-title="emergencey-medical-response-team" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/emergencey-medical-response-team%20%284%29.jpeg" alt="emergencey-medical-response-team" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">emergencey-medical-response-team</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Gemini_Generated_Image_iitraeiitraeiitr%2012.jpg" data-title="Gemini Generated Image iitraeiitraeiitr" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Gemini_Generated_Image_iitraeiitraeiitr%2012.jpeg" alt="Gemini Generated Image iitraeiitraeiitr" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Gemini Generated Image iitraeiitraeiitr</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Gray%20CA%20%281%29.png" data-title="Gray CA" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Gray%20CA%20%281%29.jpeg" alt="Gray CA" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Gray CA</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/HEALTH%20CONSULTING%20%26%20MEDICAL%20PLANNING%20-%20%20770%20x%20460.jpg" data-title="HEALTH CONSULTING & MEDICAL PLANNING -  770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/HEALTH%20CONSULTING%20%26%20MEDICAL%20PLANNING%20-%20%20770%20x%20460.jpeg" alt="HEALTH CONSULTING & MEDICAL PLANNING -  770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">HEALTH CONSULTING & MEDICAL PLANNING -  770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/HEALTHCARE%20STAFFING%20SOLUTIONS%20-%20770%20x%20460%20%281%29.jpg" data-title="HEALTHCARE STAFFING SOLUTIONS - 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/HEALTHCARE%20STAFFING%20SOLUTIONS%20-%20770%20x%20460%20%281%29.jpeg" alt="HEALTHCARE STAFFING SOLUTIONS - 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">HEALTHCARE STAFFING SOLUTIONS - 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/HEALTHCARE%20STAFFING%20SOLUTIONS%20-%20770%20x%20460.jpg" data-title="HEALTHCARE STAFFING SOLUTIONS - 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/HEALTHCARE%20STAFFING%20SOLUTIONS%20-%20770%20x%20460.jpeg" alt="HEALTHCARE STAFFING SOLUTIONS - 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">HEALTHCARE STAFFING SOLUTIONS - 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Hero%20banner%20770%20x%20460%20-%202%20.jpg" data-title="Hero banner 770 x 460" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Hero%20banner%20770%20x%20460%20-%202%20.jpeg" alt="Hero banner 770 x 460" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Hero banner 770 x 460</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Home%20page%20section%20photo%20for%20bruchore%202%20.jpg" data-title="Home page section photo for bruchore" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Home%20page%20section%20photo%20for%20bruchore%202%20.jpeg" alt="Home page section photo for bruchore" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Home page section photo for bruchore</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/How%20Our%20Services%20Work%2011%20.jpg" data-title="How Our Services Work" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/How%20Our%20Services%20Work%2011%20.jpeg" alt="How Our Services Work" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">How Our Services Work</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/industrial-site-medical-suppport-riyadh%20%283%29.png" data-title="industrial-site-medical-suppport-riyadh" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/industrial-site-medical-suppport-riyadh%20%283%29.jpeg" alt="industrial-site-medical-suppport-riyadh" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">industrial-site-medical-suppport-riyadh</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/industrial-site-medical-suppport-riyadh%20%284%29.png" data-title="industrial-site-medical-suppport-riyadh" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/industrial-site-medical-suppport-riyadh%20%284%29.jpeg" alt="industrial-site-medical-suppport-riyadh" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">industrial-site-medical-suppport-riyadh</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/industrial-site-medical-suppport-riyadh%201.png" data-title="industrial-site-medical-suppport-riyadh" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/industrial-site-medical-suppport-riyadh%201.jpeg" alt="industrial-site-medical-suppport-riyadh" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">industrial-site-medical-suppport-riyadh</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/industrial-site-medical-suppport-riyadh%202.png" data-title="industrial-site-medical-suppport-riyadh" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/industrial-site-medical-suppport-riyadh%202.jpeg" alt="industrial-site-medical-suppport-riyadh" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">industrial-site-medical-suppport-riyadh</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Lab%20tech.jpg" data-title="Lab tech" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Lab%20tech.jpeg" alt="Lab tech" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Lab tech</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/make_the_doctor_hold_xray_202604301306.jpeg" data-title="make the doctor hold xray" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/make_the_doctor_hold_xray_202604301306.jpeg" alt="make the doctor hold xray" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">make the doctor hold xray</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/MEDICAL%20EQUIPMENT%20%26%20CONSUMABLES%20-%20770%20x%20460.jpg" data-title="MEDICAL EQUIPMENT & CONSUMABLES - 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/MEDICAL%20EQUIPMENT%20%26%20CONSUMABLES%20-%20770%20x%20460.jpeg" alt="MEDICAL EQUIPMENT & CONSUMABLES - 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">MEDICAL EQUIPMENT & CONSUMABLES - 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Medical%20Facilities%20Licensing%20and%20Facilities%20Management%20%20770%20x%20460.jpg" data-title="Medical Facilities Licensing and Facilities Manageme..." data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Medical%20Facilities%20Licensing%20and%20Facilities%20Management%20%20770%20x%20460.jpeg" alt="Medical Facilities Licensing and Facilities Manageme..." loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Medical Facilities Licensing and Facilities Manageme...</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Navy%202.png" data-title="Navy" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Navy%202.jpeg" alt="Navy" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Navy</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/navy%20blue.png" data-title="navy blue" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/navy%20blue.jpeg" alt="navy blue" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">navy blue</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Nurse.jpg" data-title="Nurse" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Nurse.jpeg" alt="Nurse" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Nurse</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Nursing%20770%20x%20460.jpg" data-title="Nursing 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Nursing%20770%20x%20460.jpeg" alt="Nursing 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Nursing 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/OFFSHORE%20MEDICAL%20SERVICES%20-%20%20brochure%20photo%20sea.jpg" data-title="OFFSHORE MEDICAL SERVICES -  brochure photo sea" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/OFFSHORE%20MEDICAL%20SERVICES%20-%20%20brochure%20photo%20sea.jpeg" alt="OFFSHORE MEDICAL SERVICES -  brochure photo sea" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">OFFSHORE MEDICAL SERVICES -  brochure photo sea</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Offshore.jpg" data-title="Offshore" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Offshore.jpeg" alt="Offshore" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Offshore</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Operations%20Across%202.jpg" data-title="Operations Across" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Operations%20Across%202.jpeg" alt="Operations Across" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Operations Across</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Operations%20Across.jpg" data-title="Operations Across" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Operations%20Across.jpeg" alt="Operations Across" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Operations Across</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/PATIENT%20TRANSPORTATION%20SERVICES-%20770%20x%20460.jpg" data-title="PATIENT TRANSPORTATION SERVICES- 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/PATIENT%20TRANSPORTATION%20SERVICES-%20770%20x%20460.jpeg" alt="PATIENT TRANSPORTATION SERVICES- 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">PATIENT TRANSPORTATION SERVICES- 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Physiotherapy.jpg" data-title="Physiotherapy" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Physiotherapy.jpeg" alt="Physiotherapy" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Physiotherapy</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/PMS%20photo%20S.jpg" data-title="PMS photo S" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/PMS%20photo%20S.jpeg" alt="PMS photo S" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">PMS photo S</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Post%20surgical%20770%20x%20460.jpg" data-title="Post surgical 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Post%20surgical%20770%20x%20460.jpeg" alt="Post surgical 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Post surgical 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Reel%20Covers%202%20f%20%2814%29.jpg" data-title="Reel Covers 2 f" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Reel%20Covers%202%20f%20%2814%29.jpeg" alt="Reel Covers 2 f" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Reel Covers 2 f</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Respiratory%20Therapy%20770%20x%20460.jpg" data-title="Respiratory Therapy 770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Respiratory%20Therapy%20770%20x%20460.jpeg" alt="Respiratory Therapy 770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Respiratory Therapy 770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Screenshot%202026-04-16%20102931%20%20dd%20.jpg" data-title="Screenshot 2026-04-16 102931  dd" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Screenshot%202026-04-16%20102931%20%20dd%20.jpeg" alt="Screenshot 2026-04-16 102931  dd" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Screenshot 2026-04-16 102931  dd</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/TELE-MEDICINE%20SERVICES-%20%20770%20x%20460.jpg" data-title="TELE-MEDICINE SERVICES-  770 x" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/TELE-MEDICINE%20SERVICES-%20%20770%20x%20460.jpeg" alt="TELE-MEDICINE SERVICES-  770 x" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">TELE-MEDICINE SERVICES-  770 x</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%281%29.jpg" data-title="TRUST IMAGE - Ambulance Fleet" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%281%29.jpeg" alt="TRUST IMAGE - Ambulance Fleet" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">TRUST IMAGE - Ambulance Fleet</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%283%29.png" data-title="TRUST IMAGE - Ambulance Fleet" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%283%29.jpeg" alt="TRUST IMAGE - Ambulance Fleet" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">TRUST IMAGE - Ambulance Fleet</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%284%29.png" data-title="TRUST IMAGE - Ambulance Fleet" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%284%29.jpeg" alt="TRUST IMAGE - Ambulance Fleet" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">TRUST IMAGE - Ambulance Fleet</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%285%29.png" data-title="TRUST IMAGE - Ambulance Fleet" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%285%29.jpeg" alt="TRUST IMAGE - Ambulance Fleet" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">TRUST IMAGE - Ambulance Fleet</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%286%29.jpg" data-title="TRUST IMAGE - Ambulance Fleet" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%286%29.jpeg" alt="TRUST IMAGE - Ambulance Fleet" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">TRUST IMAGE - Ambulance Fleet</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%287%29.png" data-title="TRUST IMAGE - Ambulance Fleet" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%287%29.jpeg" alt="TRUST IMAGE - Ambulance Fleet" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">TRUST IMAGE - Ambulance Fleet</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%288%29.jpg" data-title="TRUST IMAGE - Ambulance Fleet" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/TRUST%20IMAGE%20-%20Ambulance%20Fleet%20%288%29.jpeg" alt="TRUST IMAGE - Ambulance Fleet" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">TRUST IMAGE - Ambulance Fleet</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Untitled%20%282080%20x%202080%20px%29.jpg" data-title="Untitled (2080 x 2080 px)" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Untitled%20%282080%20x%202080%20px%29.jpeg" alt="Untitled (2080 x 2080 px)" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Untitled (2080 x 2080 px)</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Untitled%20design%20%284%29.jpg" data-title="Untitled design" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Untitled%20design%20%284%29.jpeg" alt="Untitled design" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Untitled design</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Untitled%20design%2012%20b%20w.jpg" data-title="Untitled design 12 b w" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Untitled%20design%2012%20b%20w.jpeg" alt="Untitled design 12 b w" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Untitled design 12 b w</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Untitled%20design%2044.jpg" data-title="Untitled design" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Untitled%20design%2044.jpeg" alt="Untitled design" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Untitled design</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/WHD.jpg" data-title="WHD" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/WHD.jpeg" alt="WHD" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">WHD</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_065173ce252e56ba54148db052db9fecdr%20%281%29.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_065173ce252e56ba54148db052db9fecdr%20%281%29.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_0982f3f53babf868cc54ac6edf937abedr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_0982f3f53babf868cc54ac6edf937abedr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_0d1331142bcc9b28fc74640aae213799dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_0d1331142bcc9b28fc74640aae213799dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_0e270899f3fe527b9da41fbcc38cad13dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_0e270899f3fe527b9da41fbcc38cad13dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_0etm0uwzjvznmjmztejzlfwlyktn00cmwe2mtaj.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_0etm0uwzjvznmjmztejzlfwlyktn00cmwe2mtaj.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_0gznzizmzmwy2idotmwyxgtl5e2n00smjzmntuj.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_0gznzizmzmwy2idotmwyxgtl5e2n00smjzmntuj.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_18d559a02ba6bba88a24cc243de7ad4beg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_18d559a02ba6bba88a24cc243de7ad4beg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_1bca7596be45c88b66e443849dce4068dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_1bca7596be45c88b66e443849dce4068dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_1i2nlntniz2m5ctytqtn5iwl4qmn00yywgjntmt.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_1i2nlntniz2m5ctytqtn5iwl4qmn00yywgjntmt.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_1kto0iwyjdjnjvdmtgtm0iwlykzm00szyajytmj.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_1kto0iwyjdjnjvdmtgtm0iwlykzm00szyajytmj.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_1qwmhngo2izn4gtotewo5gtlinjz00so0qwntyw.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_1qwmhngo2izn4gtotewo5gtlinjz00so0qwntyw.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_1qzywezywmjzmhzntcjylfwljrzm00sn1qjntug.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_1qzywezywmjzmhzntcjylfwljrzm00sn1qjntug.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_25a184ff7ac708287124e71fb36aeef5eg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_25a184ff7ac708287124e71fb36aeef5eg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_2a6da02c7437b1aa41d43bef6795a14ddr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_2a6da02c7437b1aa41d43bef6795a14ddr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_2b65d8b21309edb9e0e4d973c3591c06dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_2b65d8b21309edb9e0e4d973c3591c06dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_30c1781213a8db98d144d3bd4fdc1d5ddr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_30c1781213a8db98d144d3bd4fdc1d5ddr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_31b51411aa973df8d324644cc53ab06bdr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_31b51411aa973df8d324644cc53ab06bdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_34840348d421776879f4a4e5a4b0874fdr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_34840348d421776879f4a4e5a4b0874fdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_35e614cfc64771a95c84da28c45f81e5dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_35e614cfc64771a95c84da28c45f81e5dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_377a137db260028bc554b42d0e7da79eeg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_377a137db260028bc554b42d0e7da79eeg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_3afba5c58b2106f87b54ed16bff14d27dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_3afba5c58b2106f87b54ed16bff14d27dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_3c571954c51d9f09e7642f49b7afcb8aeg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_3c571954c51d9f09e7642f49b7afcb8aeg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_3e3a88cceb840778ad24cdfffcb3be5ceg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_3e3a88cceb840778ad24cdfffcb3be5ceg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_3e5a6b13ae3bea6962e4b13fddb62596eg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_3e5a6b13ae3bea6962e4b13fddb62596eg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_3e7321ff94c313d963e403b76e90199ddr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_3e7321ff94c313d963e403b76e90199ddr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_3ytoyutmmrzy5qgmtmmy3gtl4ewz00izkzgztgt.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_3ytoyutmmrzy5qgmtmmy3gtl4ewz00izkzgztgt.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_44ab3c458477d5db2164739b6efb7140dr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_44ab3c458477d5db2164739b6efb7140dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_450c3f38224d3e2898140ca7fbfb764adr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_450c3f38224d3e2898140ca7fbfb764adr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_4b614716db14ced9aa44fb660c1b5fabdr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_4b614716db14ced9aa44fb660c1b5fabdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_4dd9c98e04d64dc96174af62a1de0adbdr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_4dd9c98e04d64dc96174af62a1de0adbdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_4kdzmfgmmvjzmzjmtmgzxgtlmvjm00cn0gjytmg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_4kdzmfgmmvjzmzjmtmgzxgtlmvjm00cn0gjytmg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_54e4f2b338ec59092f948f64a88773c2dr%20%282%29.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_54e4f2b338ec59092f948f64a88773c2dr%20%282%29.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_58817e7ef054c8db1584f78d58dff977eg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_58817e7ef054c8db1584f78d58dff977eg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_59c17a0da714c5892d84e1c91b95498cdr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_59c17a0da714c5892d84e1c91b95498cdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_5e851093d215ca8b66c4004692becbb3dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_5e851093d215ca8b66c4004692becbb3dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_5f9434cd489e31f831c45a283cd9f1e4eg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_5f9434cd489e31f831c45a283cd9f1e4eg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_5ijy4czmhrzn5ejntctmmltl0cty00sm3i2mtug.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_5ijy4czmhrzn5ejntctmmltl0cty00sm3i2mtug.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_5qwm2yzy4udzxy2ntimnhjwl2adn00in5qzntct.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_5qwm2yzy4udzxy2ntimnhjwl2adn00in5qzntct.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_5ymm4qzmljdnlzwztqdoxewl3atz00cn1ytztyt.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_5ymm4qzmljdnlzwztqdoxewl3atz00cn1ytztyt.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_62b50a4c5c5e5679cfb4bc0eef73ecdadr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_62b50a4c5c5e5679cfb4bc0eef73ecdadr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_67df46c33f35ed38be14a0be5da8c56edr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_67df46c33f35ed38be14a0be5da8c56edr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_6835607c8736e83a3eb4e7fd9a06b161dr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_6835607c8736e83a3eb4e7fd9a06b161dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_6db53a02a09187cbfb445889e4ef3c99dr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_6db53a02a09187cbfb445889e4ef3c99dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_73833eb0e0b93ee95a84a4d4229fca33dr%20%281%29.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_73833eb0e0b93ee95a84a4d4229fca33dr%20%281%29.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_79edf1e1221e35c9ca7421f001c5904adr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_79edf1e1221e35c9ca7421f001c5904adr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_80a854f770e4d44bf134aa2808c98d2eeg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_80a854f770e4d44bf134aa2808c98d2eeg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_880ef322a6d9445b01e45aa0e8889e40dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_880ef322a6d9445b01e45aa0e8889e40dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_8905e56e054334badbe417fc3cd704d0dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_8905e56e054334badbe417fc3cd704d0dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_8fe369e1e14b833b8084f5948fbc4dabdr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_8fe369e1e14b833b8084f5948fbc4dabdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_917ec7309ba32408384459131af3668fdr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_917ec7309ba32408384459131af3668fdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_91a79e82baf87a194014ad3ece5b05dddr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_91a79e82baf87a194014ad3ece5b05dddr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_91aac3224d47f4082f14558cc22257bdeg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_91aac3224d47f4082f14558cc22257bdeg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_9d4c81401932b39becd4f31d26f65264dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_9d4c81401932b39becd4f31d26f65264dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_9fd03da60e51377b25641a3946ba30c5dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_9fd03da60e51377b25641a3946ba30c5dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_a79a89c48f250e8b2c244e69fb88fcdbdr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_a79a89c48f250e8b2c244e69fb88fcdbdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_a7ecb533cc6e9de9287494c9db6b0242dr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_a7ecb533cc6e9de9287494c9db6b0242dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_ad7cb1ee614cf4883104a8c7019732a9dr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_ad7cb1ee614cf4883104a8c7019732a9dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_aff6b298ba1ec1792cf4e5ea7c6d9698dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_aff6b298ba1ec1792cf4e5ea7c6d9698dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_b49115dc7db5b63a024490058d4dae2feg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_b49115dc7db5b63a024490058d4dae2feg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_b5f7d279116c006bb374bf109da8caaadr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_b5f7d279116c006bb374bf109da8caaadr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_b82f610a448327086da4a76d513b8ce8eg.jpg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_b82f610a448327086da4a76d513b8ce8eg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_bb5d82cc316b98ea5974550963d76a20eg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_bb5d82cc316b98ea5974550963d76a20eg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_bb773cf6d9a113b807e421556c1f2150dr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_bb773cf6d9a113b807e421556c1f2150dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_bb853d0ceb4621b99e241b278b2b6a8cdr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_bb853d0ceb4621b99e241b278b2b6a8cdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_be40c50d7355f4a98be4f8599d99ee1cdr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_be40c50d7355f4a98be4f8599d99ee1cdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_be8d23dd6e7e467a53a43f92d4d140addr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_be8d23dd6e7e467a53a43f92d4d140addr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_beb81857289853daf1e474c482f323a8dr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_beb81857289853daf1e474c482f323a8dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_c707090c681a3c3ae2b47b69d4c3e1d9eg.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_c707090c681a3c3ae2b47b69d4c3e1d9eg.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_c8a0f6faaef1abfaada40af553c0cc5ddr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_c8a0f6faaef1abfaada40af553c0cc5ddr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_d55c7f29e5479b5bd1d45a793aa6d71ceg%20w2.jpg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_d55c7f29e5479b5bd1d45a793aa6d71ceg%20w2.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_db9ad1437ecf0f1adf74cc74970205ffdr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_db9ad1437ecf0f1adf74cc74970205ffdr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_ddd61645a28ab6d9abf454c52f95cd80dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_ddd61645a28ab6d9abf454c52f95cd80dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_ec86ab1bb5a17f6a6b747f1516a03292dr.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_ec86ab1bb5a17f6a6b747f1516a03292dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_efa110f0565b7e1b9f940c92b8fbb040dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_efa110f0565b7e1b9f940c92b8fbb040dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_etyirmy3uzymf2ym1sy2itytywmzqtlmddox0sm.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_etyirmy3uzymf2ym1sy2itytywmzqtlmddox0sm.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_f7ed346f90274b0b27643f66af5a5fb3dr.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_f7ed346f90274b0b27643f66af5a5fb3dr.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_ivdo3idmhzjzyedmtudzhfwlldzm00co3gjytcj.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_ivdo3idmhzjzyedmtudzhfwlldzm00co3gjytcj.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_kjmymwz5kjm5etoy0syyqtotywzlrtlhztmh1sz.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_kjmymwz5kjm5etoy0syyqtotywzlrtlhztmh1sz.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_mljy2gzmiddn0qwotatzkltlxq2y00yn2i2ytiw.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_mljy2gzmiddn0qwotatzkltlxq2y00yn2i2ytiw.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_mn2mivmm4mgn4kzmtqmz2ktlirjy00iymfmntmw.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_mn2mivmm4mgn4kzmtqmz2ktlirjy00iymfmntmw.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_mrdnjnmnhvtohddntq2m0iwlyqwn00sz3atytiz.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_mrdnjnmnhvtohddntq2m0iwlyqwn00sz3atytiz.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_mz2nwmty2egolzjyty2ykhtl2gtz00smljjytqt.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_mz2nwmty2egolzjyty2ykhtl2gtz00smljjytqt.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_wqgoyejyxktmkzmztiwy2ewlyqzn00cm2mjztmt.png" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_wqgoyejyxktmkzmztiwy2ewlyqzn00cm2mjztmt.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_yetm5qgzmdtzzytzte2yihtlzizn00so4kdztyw.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_yetm5qgzmdtzzytzte2yihtlzizn00so4kdztyw.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Whisk_zego3imz3ajn3qdztmjnxiwlxmgm00yyhjjmtaz.jpeg" data-title="AI Generated Visual" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Whisk_zego3imz3ajn3qdztmjnxiwlxmgm00yyhjjmtaz.jpeg" alt="AI Generated Visual" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">AI Generated Visual</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/White%20CA.png" data-title="White CA" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/White%20CA.jpeg" alt="White CA" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">White CA</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-3" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/Why%20Choose%20Capital%20Ambulance.jpg" data-title="Why Choose Capital Ambulance" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/Why%20Choose%20Capital%20Ambulance.jpeg" alt="Why Choose Capital Ambulance" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">Why Choose Capital Ambulance</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/zoom_out_the_202604221045.jpeg" data-title="zoom out the" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/zoom_out_the_202604221045.jpeg" alt="zoom out the" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">zoom out the</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-1" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/ازالة_السماعة_من_اليد_2K_202605071537.jpeg" data-title="ازالة السماعة من اليد 2K" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/ازالة_السماعة_من_اليد_2K_202605071537.jpeg" alt="ازالة السماعة من اليد 2K" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">ازالة السماعة من اليد 2K</div></div>
+          <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
+        </div>
+        <div class="port-item reveal reveal-delay-2" data-section="ai-vision-lab" data-src="images/AI%20Vision%20Lab/مبارك%20عليكم%20الشهر%20الفضيلf.jpg" data-title="مبارك عليكم الشهر الفضيلf" data-cat="AI Vision Lab">
+          <div class="port-thumb"><img src="images/thumbs/AI%20Vision%20Lab/مبارك%20عليكم%20الشهر%20الفضيلf.jpeg" alt="مبارك عليكم الشهر الفضيلf" loading="lazy" decoding="async"></div>
+          <div class="port-caption"><div class="port-caption__cat">AI Vision Lab</div><div class="port-caption__title">مبارك عليكم الشهر الفضيلf</div></div>
           <div class="port-overlay"><span class="port-overlay__btn">View</span></div>
         </div>
       </div>
@@ -1420,26 +2290,6 @@
           <div class="port-caption">
             <p class="port-caption__cat">Portrait &amp; People</p>
             <p class="port-caption__title">Dsc 9210</p>
-          </div>
-        </div>
-        <div class="port-item reveal reveal-delay-2" data-section="portrait" data-src="images/photography/Portrait%20and%20People/DSC_92400.jpg" data-title="Dsc 92400" data-cat="Portrait &amp; People">
-          <div class="port-thumb">
-            <img src="images/thumbs/Portrait%20and%20People/DSC_92400.jpg" loading="lazy" alt="Dsc 92400" decoding="async" />
-            <div class="port-overlay"><span class="port-overlay__btn">View Photo</span></div>
-          </div>
-          <div class="port-caption">
-            <p class="port-caption__cat">Portrait &amp; People</p>
-            <p class="port-caption__title">Dsc 92400</p>
-          </div>
-        </div>
-        <div class="port-item reveal reveal-delay-3" data-section="portrait" data-src="images/photography/Portrait%20and%20People/DSC_924000.jpg" data-title="Dsc 924000" data-cat="Portrait &amp; People">
-          <div class="port-thumb">
-            <img src="images/thumbs/Portrait%20and%20People/DSC_924000.jpg" loading="lazy" alt="Dsc 924000" decoding="async" />
-            <div class="port-overlay"><span class="port-overlay__btn">View Photo</span></div>
-          </div>
-          <div class="port-caption">
-            <p class="port-caption__cat">Portrait &amp; People</p>
-            <p class="port-caption__title">Dsc 924000</p>
           </div>
         </div>
         <div class="port-item reveal" data-section="portrait" data-src="images/photography/Portrait%20and%20People/Festival%20Abu%20Dhabi%20Hunting%20and%20Equestrian%2020105.jpg" data-title="Festival Abu Dhabi Hunting And Equestrian 20105" data-cat="Portrait &amp; People">
@@ -3681,10 +4531,10 @@
       <div class="footer__inner">
         <div class="footer__brand">Mohammad Alhaj Younes</div>
         <nav class="footer__links">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/portfolio">Portfolio</a>
-          <a href="/#contact">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="index.html#contact">Contact</a>
         </nav>
       </div>
       <p class="footer__copy">&copy; 2025 Mohammad Alhaj Younes &mdash; Healthcare Marketing Manager &middot; Brand Strategist &middot; Art Director &middot; Professional Photographer</p>
@@ -3715,28 +4565,44 @@
 
     // u{2500}u{2500} TWO-LEVEL NAV u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}
     const btnGD      = document.getElementById('btnGD');
+    const btnAI      = document.getElementById('btnAI');
     const btnPhoto   = document.getElementById('btnPhoto');
     const portJumps  = document.getElementById('portJumps');
     const gdSection  = document.getElementById('graphic-design');
-    const photoSects = document.querySelectorAll('.port-category:not(#graphic-design)');
+    const aiSection  = document.getElementById('ai-vision-lab');
+    const photoSects = document.querySelectorAll('.port-category:not(#graphic-design):not(#ai-vision-lab)');
 
     function setMode(mode) {
+      [btnGD, btnAI, btnPhoto].forEach(b => b.classList.remove('active'));
+
       if (mode === 'graphic-design') {
-        btnGD.classList.add('active');    btnPhoto.classList.remove('active');
+        btnGD.classList.add('active');
         portJumps.style.display = 'none';
         gdSection.style.display = '';
+        aiSection.style.display = 'none';
         photoSects.forEach(s => s.style.display = 'none');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      } else if (mode === 'ai-vision-lab') {
+        btnAI.classList.add('active');
+        portJumps.style.display = 'none';
+        gdSection.style.display = 'none';
+        aiSection.style.display = '';
+        photoSects.forEach(s => s.style.display = 'none');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
       } else {
-        btnPhoto.classList.add('active'); btnGD.classList.remove('active');
+        btnPhoto.classList.add('active');
         portJumps.style.display = '';
         gdSection.style.display = 'none';
+        aiSection.style.display = 'none';
         photoSects.forEach(s => s.style.display = '');
-        // scroll to first photography section
-        window.scrollTo({ top: document.getElementById('baby').offsetTop - 150, behavior: 'smooth' });
+        window.scrollTo({ top: document.getElementById('corporate').offsetTop - 150, behavior: 'smooth' });
       }
     }
 
     btnGD.addEventListener('click',    () => setMode('graphic-design'));
+    btnAI.addEventListener('click',    () => setMode('ai-vision-lab'));
     btnPhoto.addEventListener('click', () => setMode('photography'));
 
     // u{2500}u{2500} JUMP NAV ACTIVE STATE u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}u{2500}
@@ -3815,6 +4681,7 @@
 
 </body>
 </html>
+
 
 
 

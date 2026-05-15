@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "moe-profile",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3000", "."],
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["local-server.py"],
       "port": 3000
     }
   ]

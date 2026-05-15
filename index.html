@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -400,14 +400,32 @@
       overflow: hidden;
     }
 
+    /* Base: both pose images share the same frame */
     .hero__photo-img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: 42% top;
       display: block;
-      transform: scale(1.4);
       transform-origin: 42% top;
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+    }
+
+    /* POSE 1 — default / hand in pocket */
+    .hero__photo--p1 {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    /* POSE 2 — folded arms — starts zoomed in on face, pulls back to reveal arms */
+    .hero__photo--p2 {
+      z-index: 2;
+      opacity: 0;
+      transform: scale(1.55);
+      transform-origin: 44% 15%;
     }
 
     .hero__container {
@@ -1639,9 +1657,9 @@
         <a href="#" class="nav__logo">Mohammad <span>Alhaj Younes</span></a>
 
         <ul class="nav__links">
-          <li><a href="/about">About</a></li>
-          <li><a href="/expertise">Expertise</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="expertise.html">Expertise</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="#case-studies">Work</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1658,9 +1676,9 @@
   <!-- Mobile menu -->
   <div class="nav__mobile" id="mobileMenu">
     <button class="nav__mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
-    <a href="/about" class="mobile-link">About</a>
-    <a href="/expertise" class="mobile-link">Expertise</a>
-    <a href="/portfolio" class="mobile-link">Portfolio</a>
+    <a href="about.html" class="mobile-link">About</a>
+    <a href="expertise.html" class="mobile-link">Expertise</a>
+    <a href="portfolio.html" class="mobile-link">Portfolio</a>
     <a href="#case-studies" class="mobile-link">Work</a>
     <a href="#contact" class="mobile-link">Contact</a>
   </div>
@@ -1671,13 +1689,30 @@
        ============================================================ -->
   <section class="hero" id="hero">
 
-    <!-- Full-bleed portrait photograph -->
-    <div class="hero__photo-wrap">
+    <!-- Full-bleed portrait photograph — two poses for cinematic scroll crossfade -->
+    <div class="hero__photo-wrap" id="heroPhotoWrap">
+
+      <!-- POSE 1 — hand in pocket / default (always loaded first) -->
       <img
-        class="hero__photo-img"
+        class="hero__photo-img hero__photo--p1"
+        id="heroP1"
         src="images/Moe self picture/Mohammad Alhaj Younes.jpeg"
         alt="Mohammad Alhaj Younes"
+        fetchpriority="high"
       />
+
+      <!-- POSE 2 — folded arms (fades in as user scrolls)              -->
+      <!-- Place the matching photo at the path below when ready:        -->
+      <!-- images/Moe self picture/Mohammad-folded-arms.jpeg             -->
+      <img
+        class="hero__photo-img hero__photo--p2"
+        id="heroP2"
+        src="images/Moe self picture/Mohammad-folded-arms.jpeg"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      />
+
     </div>
 
     <!-- Text content — sits above the gradient overlay -->
@@ -1704,7 +1739,7 @@
         </ul>
 
         <div class="hero__ctas">
-          <a href="/portfolio" class="btn btn--olive">
+          <a href="portfolio.html" class="btn btn--olive">
             View Portfolio
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -1798,7 +1833,7 @@
           </div>
 
           <div class="about-teaser__ctas">
-            <a href="/about" class="btn btn--primary">
+            <a href="about.html" class="btn btn--primary">
               View Full Profile
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -2353,7 +2388,7 @@
             Get In Touch
             <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a href="/portfolio" class="btn btn--outline-light">View Portfolio</a>
+          <a href="portfolio.html" class="btn btn--outline-light">View Portfolio</a>
         </div>
       </div>
     </div>
@@ -2390,10 +2425,10 @@
         <div>
           <p class="footer__col-title">Navigation</p>
           <ul class="footer__links">
-            <li><a href="/about">About</a></li>
-            <li><a href="/expertise">Expertise</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="expertise.html">Expertise</a></li>
             <li><a href="#brands">Experience</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="#case-studies">Case Studies</a></li>
           </ul>
         </div>
@@ -2647,12 +2682,11 @@
       if (e.key === 'ArrowRight')  nextSlide();
     });
 
-    // ── PARALLAX (hero photo · about portrait · expertise grid) ──
+    // ── PARALLAX (about portrait · expertise grid) ───────────────
+    // Hero photo is now handled entirely by the cinematic scroll block below.
     (function () {
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-      const heroEl     = document.getElementById('hero');
-      const heroPhoto  = document.querySelector('.hero__photo-img');
       const aboutImg   = document.querySelector('.about-teaser__photo img');
       const expertGrid = document.querySelector('.expertise__grid');
 
@@ -2668,22 +2702,13 @@
 
       function applyParallax() {
         if (window.innerWidth < 768) {
-          if (heroPhoto)  heroPhoto.style.transform  = '';
           if (aboutImg)   aboutImg.style.transform   = '';
           if (expertGrid) expertGrid.style.transform = '';
           ticking = false;
           return;
         }
-
-        // Hero photo moves at 25% scroll speed — appears to float further back
-        if (heroPhoto) {
-          const cap = Math.min(window.scrollY, heroEl.offsetHeight);
-          heroPhoto.style.transform = `scale(1.4) translate3d(0, ${cap * 0.22}px, 0)`;
-        }
-
         sectionParallax(aboutImg,   0.08);
         sectionParallax(expertGrid, 0.07);
-
         ticking = false;
       }
 
@@ -2693,6 +2718,100 @@
           ticking = true;
         }
       }, { passive: true });
+    }());
+
+    // ── HERO CINEMATIC SCROLL ─────────────────────────────────────
+    // Scroll-driven crossfade between two portrait poses.
+    // Pose 1 (hand in pocket) → Pose 2 (folded arms) as hero leaves viewport.
+    // Falls back gracefully to a single-image cinematic zoom if pose 2 is absent.
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const hero = document.getElementById('hero');
+      const p1   = document.getElementById('heroP1');
+      const p2   = document.getElementById('heroP2');
+      if (!hero || !p1) return;
+
+      // ── Ease: smooth acceleration + deceleration (cubic in-out)
+      function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      }
+
+      // ── Detect pose 2 availability — fail silently if file is missing
+      let pose2Ready = false;
+      if (p2) {
+        if (p2.complete && p2.naturalWidth > 0) {
+          pose2Ready = true;
+        } else {
+          p2.addEventListener('load',  function () { pose2Ready = true; });
+          p2.addEventListener('error', function () {
+            pose2Ready = false;
+            p2.style.display = 'none'; // hide broken-image slot
+          });
+        }
+      }
+
+      let ticking  = false;
+      let prevEased = -1;
+
+      function update() {
+        // ── Mobile: reset everything, hand off to mobile CSS
+        if (window.innerWidth < 768) {
+          p1.style.transform = '';
+          p1.style.opacity   = '';
+          if (p2) { p2.style.opacity = '0'; p2.style.transform = ''; }
+          ticking = false;
+          return;
+        }
+
+        const scrollY = window.scrollY;
+        const heroH   = hero.offsetHeight;
+
+        // Scroll progress: 0 = hero at top, 1 = ~30% of hero scrolled away
+        const raw   = scrollY / (heroH * 0.30);
+        const t     = Math.min(Math.max(raw, 0), 1);
+        const eased = easeInOutCubic(t);
+
+        // Skip rAF work if change is imperceptible (< 0.15%)
+        if (Math.abs(eased - prevEased) < 0.0015) { ticking = false; return; }
+        prevEased = eased;
+
+        // Shared parallax depth: photo drifts slowly upward as page scrolls
+        const cap   = Math.min(scrollY, heroH);
+        const moveY = cap * 0.22;
+
+        if (pose2Ready && p2) {
+          // P1 fades out, no scale change
+          p1.style.opacity   = String(+(1 - eased).toFixed(4));
+          p1.style.transform = `translate3d(0,${moveY.toFixed(2)}px,0)`;
+
+          // P2 fades in while zooming out: 1.55 → 1.1, anchored at face (transform-origin 44% 15%)
+          // No parallax on p2 — translate causes top-gap issues with the tight crop
+          const p2Scale = 1.55 - eased * 0.45;
+          p2.style.opacity   = String(+eased.toFixed(4));
+          p2.style.transform = `scale(${p2Scale.toFixed(4)})`;
+
+        } else {
+          // ═══════════════════════════════════════════════════════
+          // SINGLE-IMAGE CINEMATIC MODE (active until pose 2 added)
+          // Subtle zoom-out as hero exits — premium Ken Burns reverse.
+          // ═══════════════════════════════════════════════════════
+          const p1Scale = 1.4 - eased * 0.10; // 1.40 → 1.30
+          p1.style.transform = `scale(${p1Scale.toFixed(4)}) translate3d(0,${moveY.toFixed(2)}px,0)`;
+        }
+
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      }, { passive: true });
+
+      // Set initial state on load
+      update();
     }());
   </script>
 
